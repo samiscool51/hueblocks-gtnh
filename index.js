@@ -286,23 +286,23 @@ function presetImport() {
 	/* wipe previous presets */
 	$("option").remove();
 
-	/* create 'Default (1.20.1 blocks)' option if blockset = blocks */
+	/* create 'Default (1.21.4 blocks)' option if blockset = blocks */
 	if (blockset == 'blocks') {
 		$('#blocksPresetDD').append(
 			$(document.createElement('option')).prop({
 				value: 'blocks',
-				text: 'Default (1.20.1 blocks)'
+				text: 'Default (1.21.4 blocks)'
 		}));
 	$('#blocksPresetDD').val('blocks');
 	blockData = eval( $('#blocksPresetDD').val() );
 	}
 
-	/* create 'Default (1.20.1 PA blocks)' option if blockset = blocks_pa */
+	/* create 'Default (1.13.2 PA blocks)' option if blockset = blocks_pa */
 	if (blockset == 'blocks_pa') {
 		$('#blocksPresetDD').append(
 			$(document.createElement('option')).prop({
 				value: 'blocks_pa',
-				text: 'Default (1.20.1 PA blocks)'
+				text: 'Default (1.13.2 PA blocks)'
 		}));
 	$('#blocksPresetDD').val('blocks_pa');
 	blockData = eval( $('#blocksPresetDD').val());
@@ -518,7 +518,7 @@ $('#blocksPresetDD').change(() => {
 		/* visualise all the available blocks in alphabetic order */
 		let CPselVisLetter = 'ибражы';
 
-		for (let CPSelBlocksVis = blockData.length -1; CPSelBlocksVis >= 0; CPSelBlocksVis -= 1) {
+		for (let CPSelBlocksVis in blockData) {
 			if (CPselVisLetter != blockData[CPSelBlocksVis].id[0]) {
 
 				/* close letter separator */
@@ -633,7 +633,6 @@ $('#blocksetSwitcher').on('click', () => blocksetSwitch());
 var BPickCSV = 'color1';
 
 function colorBPick(color) {
-	var BPickBlocksVis = 0;
 	$('#BPickScreen').fadeIn(300);
 	$('#BPickScreenVis').html('');
 
@@ -643,7 +642,7 @@ function colorBPick(color) {
 	/* visualise all the blocks available  */
 	var BPickVisLetter = 'ибражы';
 
-	for (BPickBlocksVis = blockData.length -1; BPickBlocksVis >= 0; BPickBlocksVis--) {
+	for (let BPickBlocksVis in blockData) {
 		if (BPickVisLetter != blockData[BPickBlocksVis].id[0]) {
 			if (BPickBlocksVis != blockData.length -1) {
 				BPickVis = $('</div>');
