@@ -48,7 +48,10 @@ def converter():
             #print('opened "' + imgName + '" --', imgProc.format, imgProc.size, imgProc.mode)
 
             # resize the image to 1px and convert to RGBA
-            imgProc = imgProc.resize((1, 1), Image.ANTIALIAS).convert('RGBA')
+            # UPD: Image.ANTIALIAS is now deprecated, so use Image.LANCZOS which does exactly the same
+            imgProc = imgProc.resize((1, 1), Image.LANCZOS).convert('RGBA')
+            # imgProc = imgProc.resize((1, 1), Image.ANTIALIAS).convert('RGBA')
+
             #print('converted "' + imgName + '" to 1px RGBA temp image')
 
             # load temp image and take the color of the only pixel from it
@@ -90,6 +93,8 @@ def checkmate():
     # get list of all .png files in the directory folder
     global listImgFound
     listImgFound = [f for f in os.listdir('./' + dirname) if f.endswith('.png')]
+    # UPD: Sort images (they used to be read last to first, but now they apparently aren't?)
+    listImgFound.sort(reverse=True)
 
     # check if the list is not empty
     if listImgFound == []:
