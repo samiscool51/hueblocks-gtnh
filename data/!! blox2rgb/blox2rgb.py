@@ -48,10 +48,10 @@ def converter():
             #print('opened "' + imgName + '" --', imgProc.format, imgProc.size, imgProc.mode)
 
             # resize the image to 1px and convert to RGBA
-            # UPD: Image.ANTIALIAS is now deprecated, so use Image.LANCZOS which does exactly the same
-            imgProc = imgProc.resize((1, 1), Image.LANCZOS).convert('RGBA')
-            # imgProc = imgProc.resize((1, 1), Image.ANTIALIAS).convert('RGBA')
-
+            # UPD: Image.ANTIALIAS is now deprecated, so use Image.LANCZOS, which gives around
+            # the same colours (not 100% precise but other methods produce values even worse)
+            imgProc = imgProc.resize((1, 1), Image.BICUBIC).convert('RGBA')
+            # imgProc = imgProc.resize((1, 1), Image.HAMMING).convert('RGBA')
             #print('converted "' + imgName + '" to 1px RGBA temp image')
 
             # load temp image and take the color of the only pixel from it

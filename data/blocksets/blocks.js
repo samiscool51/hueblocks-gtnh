@@ -1,4 +1,4 @@
-/* generated at 2025-01-22 23:53:07.146739 */
+/* generated at 2025-01-23 04:20:00.307760 */
 
 var blocks = [
 	{ id: "acacia_log.png", rgb: [105, 98, 89] },
@@ -57,7 +57,6 @@ var blocks = [
 	{ id: "budding_amethyst.png", rgb: [100, 71, 158] },
 	{ id: "calcite.png", rgb: [217, 219, 215] },
 	{ id: "cartography_table_side2.png", rgb: [208, 177, 104] },
-	{ id: "cartography_table_top.png", rgb: [188, 161, 96] },
 	{ id: "carved_pumpkin.png", rgb: [196, 118, 20] },
 	{ id: "cherry_log.png", rgb: [48, 29, 41] },
 	{ id: "cherry_planks.png", rgb: [231, 202, 197] },
@@ -75,7 +74,6 @@ var blocks = [
 	{ id: "chiseled_stone_bricks.png", rgb: [90, 89, 90] },
 	{ id: "chiseled_tuff.png", rgb: [89, 94, 87] },
 	{ id: "chiseled_tuff_bricks_top.png", rgb: [108, 113, 107] },
-	{ id: "chiseled_tuff_top.png", rgb: [118, 119, 111] },
 	{ id: "clay.png", rgb: [154, 163, 179] },
 	{ id: "coal_block.png", rgb: [31, 30, 30] },
 	{ id: "coal_ore.png", rgb: [127, 127, 127] },
@@ -203,7 +201,6 @@ var blocks = [
 	{ id: "light_gray_shulker_box.png", rgb: [139, 139, 130] },
 	{ id: "light_gray_terracotta.png", rgb: [135, 107, 98] },
 	{ id: "light_gray_wool.png", rgb: [134, 134, 126] },
-	{ id: "lightning_rod_on.png", rgb: [255, 255, 255] },
 	{ id: "lime_concrete.png", rgb: [93, 168, 24] },
 	{ id: "lime_concrete_powder.png", rgb: [126, 189, 42] },
 	{ id: "lime_glazed_terracotta.png", rgb: [127, 204, 25] },
@@ -213,7 +210,6 @@ var blocks = [
 	{ id: "lodestone_side.png", rgb: [74, 74, 83] },
 	{ id: "lodestone_top.png", rgb: [127, 127, 127] },
 	{ id: "loom_bottom.png", rgb: [82, 65, 39] },
-	{ id: "loom_front.png", rgb: [202, 166, 113] },
 	{ id: "loom_side.png", rgb: [202, 166, 113] },
 	{ id: "loom_top.png", rgb: [168, 149, 140] },
 	{ id: "magenta_concrete.png", rgb: [169, 48, 159] },
@@ -233,7 +229,6 @@ var blocks = [
 	{ id: "mud.png", rgb: [51, 50, 58] },
 	{ id: "mud_bricks.png", rgb: [171, 134, 97] },
 	{ id: "muddy_mangrove_roots_side.png", rgb: [51, 50, 58] },
-	{ id: "muddy_mangrove_roots_top.png", rgb: [90, 72, 44] },
 	{ id: "mushroom_block_inside.png", rgb: [199, 168, 119] },
 	{ id: "mushroom_stem.png", rgb: [205, 198, 189] },
 	{ id: "mycelium_side.png", rgb: [58, 41, 28] },
@@ -385,7 +380,6 @@ var blocks = [
 	{ id: "terracotta.png", rgb: [156, 93, 65] },
 	{ id: "tnt_bottom.png", rgb: [177, 21, 39] },
 	{ id: "tnt_side.png", rgb: [55, 54, 86] },
-	{ id: "tnt_top.png", rgb: [17, 17, 30] },
 	{ id: "tube_coral_block.png", rgb: [33, 67, 164] },
 	{ id: "tuff.png", rgb: [133, 131, 123] },
 	{ id: "tuff_bricks.png", rgb: [99, 108, 109] },

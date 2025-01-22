@@ -279,11 +279,11 @@ function hidePopup() {
 /* default values for block types and data */
 var blockset = 'blocks';
 var blockData = eval('blocks');
-var presetsLocation = eval('presets');
+var presetsLocation = eval('palettes');
 
-/* presets importer */
+/* palettes importer */
 function presetImport() {
-	/* wipe previous presets */
+	/* wipe previous palettes */
 	$("option").remove();
 
 	/* create 'Default (1.21.4 blocks)' option if blockset = blocks */
@@ -322,29 +322,29 @@ function presetImport() {
 		presetImporter += 1;
 	}
 
-	/* add 'Custom preset...' option when all presets are imported */
+	/* add 'Custom palette...' option when all palettes are imported */
 	$('#blocksPresetDD').append(
 		$(document.createElement('option')).prop({
 			value: 'customPreset',
-			text: 'Custom preset...'
+			text: 'Custom palette...'
 		})
 	);
 }
 presetImport();
 
-/* preset selector */
+/* palette selector */
 $('#blocksPresetDD').change( () => {
 	if (!$('#blocksPresetDD').val().includes("custom")) {
 		console.log(`[p] Changed preset to "${$('#blocksPresetDD').val()}"`);
 		blockData = eval( $('#blocksPresetDD').val() );
 }});
 
-/* preset defaulter */
+/* palette defaulter */
 function presetDefaulter() {
 	blockset == 'blocks_pa' ? $('#blocksPresetDD').val('blocks_pa') : $('#blocksPresetDD').val('blocks');
 	blockData = eval( $('#blocksPresetDD').val() );
-	if (blockset == 'blocks') presetsLocation = eval('presets');
-	if (blockset == 'blocks_pa') presetsLocation = eval('presets_pa');
+	if (blockset == 'blocks') presetsLocation = eval('palettes');
+	if (blockset == 'blocks_pa') presetsLocation = eval('palettes_pa');
 }
 
 
@@ -462,7 +462,7 @@ $('#CBSelScreenConfirm').on('click', () => {
 	$('#blocksetSwitcher').prop('disabled', true);
 	$('#CBBtn').attr('inuse', true);
 
-	/* use special preset */
+	/* use special palette */
 	$('#blocksPresetDD').html('');
 	$('#blocksPresetDD').append(
 		$(document.createElement('option')).prop({
@@ -487,7 +487,7 @@ function CBConfirmUpdater(i) {
 /* custom blockset reverter */
 $('#blocksetSwitcherHandler').on('click', () => {
 	if ($('#blocksetSwitcher').is(':disabled')) {
-		/* re-import and re-default presets */
+		/* re-import and re-default palettes */
 		presetImport();
 		presetDefaulter();
 		customBlockset = [];
@@ -506,7 +506,7 @@ $('#blocksetSwitcherHandler').on('click', () => {
 
 
 
-/* custom preset blocks selection screen */
+/* custom palette's blocks selection screen */
 $('#blocksPresetDD').change(() => {
 	if ($('#blocksPresetDD').val() == 'customPreset') {
 		presetDefaulter();
@@ -574,7 +574,7 @@ function CPBlocksParser() {
 	let CPSelectedBlocks = $('.CPSelVis:checked'), CPSelectedBlocksPart = [];
 
 	for (let currentCPSelectedBlock = 0; currentCPSelectedBlock <= CPSelectedBlocks.length -1; currentCPSelectedBlock++) {
-		/* convert blockrgb and blockid to preset array format */
+		/* convert blockrgb and blockid to palette format */
 		CPSelectedBlocksPart = {
 			id: $('#' + CPSelectedBlocks[currentCPSelectedBlock].id + 'Img').attr('blockid'),
 			rgb: [
@@ -584,27 +584,27 @@ function CPBlocksParser() {
 		]}
 	CPParsedBlocks.push(CPSelectedBlocksPart);
 	}
-	console.log(`[p] Parsed ${CPParsedBlocks.length} block(s) as preset array: `, CPParsedBlocks);
+	console.log(`[p] Parsed ${CPParsedBlocks.length} block(s) as custom palette array: `, CPParsedBlocks);
 	return CPParsedBlocks;
 }
 
-/* custom presets confirm button */
+/* custom palettes confirm button */
 $('#CPSelScreenConfirm').on('click', () => {
 	$('#CPSelScreen').fadeOut(300);
 
 	let CPBlocks = CPBlocksParser();
 
-	/* push generated array to the custom preset */
+	/* push generated array to the custom palette */
 	$('#blocksPresetDD').val('customPreset');
 	blockData = CPBlocks;
 
-	console.log(`[p] Custom preset generated, changed to "${$('#blocksPresetDD').val()}"`);
+	console.log(`[p] Custom palette generated, changed to "${$('#blocksPresetDD').val()}"`);
 	//console.log('[p]', custom);
 });
 
-/* custom presets cancel button */
+/* custom palettes cancel button */
 $('#CPSelScreenClose').on('click', () => {
-	console.log('[p] Custom preset cancelled.');
+	console.log('[p] Custom palette cancelled.');
 	$('#CPSelScreen').fadeOut(300);
 	CPBlockUpdater();
 });

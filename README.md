@@ -9,14 +9,16 @@ Additionally you can:<ul>
 <li>pick starting/final colour from the block you want to start/end with
 <li>select a blocks preset (or even create your own!) if you want to generate a gradient using only specific blocks
 <li>switch between new and old textures (blocksets) if you're playing on legacy Minecraft versions
-<li><b>[ʙᴇᴛᴀ]</b> use your own blocksets if you want to create a gradient out of non-Vanilla blocks
+<li><b>[ʙᴇᴛᴀ]</b> create your own blocksets right in the webapp, no need to tinker with Python locally!
 <li><i>etc.</i></ul>
 
-HueBlocks uses Minecraft Java Edition 1.18 (Jappa-nese) and 1.12.2 (Programmer's Art) block textures. 
-<br>Please note that <i>not every single</i> texture included! Transparent, some non-solid and generally messy-looking blocks (like TNT) were scrapped for the sake of better gradient generation quality.
+HueBlocks uses Minecraft Java Edition 1.21.4 (Jappa-nese) and 1.13.2 (Programmer's Art) block textures. 
+<br><b><i>Please note that not every single texture is included!</i></b> Transparent, biome/foliage-affected, and just messy/noisy looking blocks were scrapped for the sake of better gradient generation quality.
 
-If you want to generate custom presets for your fork, you can use blox2rgb.py — a simple Python script for autogeneration blockdata files. <i>Check <a href="https://github.com/1280px/hueblocks/tree/main/data/!!%20blox2rgb">"blox2rgb" folder</a> for more info</i>
+<br>If you want to create a custom blockset(-s) for your fork, you can use blox2rgb.py — a simple Python script for quick blocksets blockdata generation from PNG files. 
+<br><i>To get started, check <a href="https://github.com/1280px/hueblocks/tree/main/data/!!%20blox2rgb">readme.txt in blox2rgb folder</a> for more information</i>
 
 
 <br><h1>Legal Notice</h1>
-<b>All the textures provided are taken directly from Minecraft Java Edition 1.18/1.12.2 and owned by Mojang Studios. I do not claim any rights on these, and all the textures provided are used only for demonstration purposes!</b>
+
+<b>All the textures included in this repo are extracted directly from various Minecraft Java Edition version and owned by and belong to Mojang Studios. I do not claim any rights on these, and all the textures provided are provided for demonstration purposes only!</b>

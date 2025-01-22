@@ -311,7 +311,8 @@ small {
     margin: 4px 4px 20px;
 }
 .CPSelVisImg, .BPickVisImg, .CBSelVisImg {
-	width: 64px;	height: 64px;
+	background-color: #9994; /* placeholder background */
+	width: 64px;	height: 64px;		
 	image-rendering: pixelated;			/* for Chromium-based browsers */
 	image-rendering: crisp-edges;		/* for Firefox-based browsers */
 	margin-bottom: -4px;
