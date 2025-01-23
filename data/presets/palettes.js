@@ -253,7 +253,6 @@ var grayscale = [
 	{ id: "gray_concrete_powder.png", rgb: [77, 81, 85] },
 	{ id: "gray_glazed_terracotta.png", rgb: [153, 153, 153] },
 	{ id: "gray_shulker_box.png", rgb: [61, 66, 69] },
-	{ id: "gray_terracotta.png", rgb: [58, 42, 36] },
 	{ id: "gray_wool.png", rgb: [59, 63, 66] },
 	{ id: "iron_block.png", rgb: [230, 230, 230] },
 	{ id: "light_gray_concrete.png", rgb: [126, 126, 116] },
