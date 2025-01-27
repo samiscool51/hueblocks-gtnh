@@ -408,4 +408,4 @@ var blocks = [
     { id: "yellow_terracotta.png", rgb: [186, 133, 35] },
 ];
 
-console.log("*beep* blocks.js values initialized");
+console.log("*beep* data\blocksets\blocks.js values initialized");

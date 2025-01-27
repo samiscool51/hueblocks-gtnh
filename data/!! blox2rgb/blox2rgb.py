@@ -1,6 +1,8 @@
 from PIL import Image
 from colormath.color_objects import XYZColor, sRGBColor
 from colormath.color_conversions import convert_color
+from colormath.color_objects import XYZColor, sRGBColor
+from colormath.color_conversions import convert_color
 import os
 import sys
 import datetime
@@ -34,6 +36,8 @@ def converter():
     outputTxt.write('/* generated at ' + str(datetime.datetime.now()) + ' */\n\n')
 
     # add starting part of a block-storing JS object
+    varName = dirname.removeprefix('data\\blocksets\\')
+    outputTxt.write('var ' + varName + ' = [\n')
     varName = dirname.removeprefix('data\\blocksets\\')
     outputTxt.write('var ' + varName + ' = [\n')
     outputTxt.close()
