@@ -1,7 +1,8 @@
 from PIL import Image
+from colormath.color_objects import XYZColor, sRGBColor
+from colormath.color_conversions import convert_color
 import os
 import sys
-import shutil
 import datetime
 
 print('[][][][][] blox2rgb v3 [][][][][]\n')
@@ -12,7 +13,7 @@ dirname = 'input'
 # start conversion again or quit
 def postConvert():
     global dirname
-    dirname = input('If you wish to convert another blockset, please enter its directory name,\nor press Enter to terminate... ')
+    dirname = input('\nIf you wish to convert another blockset, please enter its directory name,\nor press Enter to terminate... ')
     if dirname == '':
         sys.exit()
     else:
@@ -33,47 +34,55 @@ def converter():
     outputTxt.write('/* generated at ' + str(datetime.datetime.now()) + ' */\n\n')
 
     # add starting part of a block-storing JS object
-    outputTxt.write('var ' + dirname + ' = [\n')
+    varName = dirname.removeprefix('data\\blocksets\\')
+    outputTxt.write('var ' + varName + ' = [\n')
     outputTxt.close()
 
     failedImgCnt = 0
+
     # cycle through the images starting from the LAST one until -1 is reached
-    i = len(listImgFound) -1
-    while i >= 0:
+    for i in range(len(listImgFound)-1, 0, -1):
         imgName = listImgFound[i]
 
-        # try to open an image
-        try:  
-            imgProc = Image.open('./' + dirname + '/' + imgName)
-            #print('opened "' + imgName + '" --', imgProc.format, imgProc.size, imgProc.mode)
+        imgProc = Image.open('./' + dirname + '/' + imgName).convert('RGBA')
+        
+        # XYZ Space for averaging colours.      (later converted back to rgb)
+        xyzSum = [0, 0, 0, 0]
+        imgExpld = list(imgProc.getdata());
+        count = 0
+        
+        for a in imgExpld:
+            if a[3] != 0:  # skip empty pixel
 
-            # resize the image to 1px and convert to RGBA
-            # UPD: Image.ANTIALIAS is now deprecated, so use Image.LANCZOS, which gives around
-            # the same colours (not 100% precise but other methods produce values even worse)
-            imgProc = imgProc.resize((1, 1), Image.BICUBIC).convert('RGBA')
-            # imgProc = imgProc.resize((1, 1), Image.HAMMING).convert('RGBA')
-            #print('converted "' + imgName + '" to 1px RGBA temp image')
+                # convert pixel from srgb to xzy
+                rgb = sRGBColor(a[0]/255, a[1]/255, a[2]/255)    #normalised values
+                xyz = convert_color(rgb, XYZColor, target_illuminant='d50')
 
-            # load temp image and take the color of the only pixel from it
-            imgTemp = imgProc.load()
-            imgColor = imgTemp[0, 0]
-            #print('rgb data of "' + imgName + '" is', str(imgColor[0]) + ', ' + str(imgColor[1]) + ', ' + str(imgColor[2]))
+                xyzSum[0] += float(xyz.xyz_x)       #|
+                xyzSum[1] += float(xyz.xyz_y)       #|
+                xyzSum[2] += float(xyz.xyz_z)       #| sum with total
+                xyzSum[3] += a[3]                   #|
+                count += 1
+        # (semi-transparent blocks aren't allowed, because they work REALLY
+        # BAD for buildings; I'll leave the code for computation alpha channel
+        # here, but, as of now, it is not used...)
 
-            # append result to the block-storing JS object
-            outputTxt = open(dirname + '.js', 'a')
-            if i == 0:
-                outputTxt.write('	{ id: "' + imgName + '", rgb: [' + str(imgColor[0]) + ', ' + str(imgColor[1]) + ', ' + str(imgColor[2]) + '] }\n')
-            else:
-                outputTxt.write('	{ id: "' + imgName + '", rgb: [' + str(imgColor[0]) + ', ' + str(imgColor[1]) + ', ' + str(imgColor[2]) + '] },\n')
-            #print('saved', imgName, 'as "block' + str(i) + '" with colour data ' + str(imgColor[0]) + ', ' + str(imgColor[1]) + ', ' + str(imgColor[2]))
+        # divide by imgExpld.len()
+        imgColor = [xyzSum[0]/count, xyzSum[1]/count, xyzSum[2]/count, xyzSum[3]/count]
 
-        # skip to the next image if the current one cannot be processed
-        except:  
-            print('[!] Warning -- "' + imgName + '" cannot be processed.')
-            failedImgCnt += 1
+        # convert from XYZ to sRGB
+        xyzImgColor = XYZColor(imgColor[0], imgColor[1], imgColor[2])
+        rgbImgColor = convert_color(xyzImgColor, sRGBColor)
+        
+        rgb = str(round(rgbImgColor.rgb_r * 255)) + ', ' + str(round(rgbImgColor.rgb_g * 255)) + ', ' + str(round(rgbImgColor.rgb_b * 255))
+        xyz = str(xyzImgColor.xyz_x) + ', ' + str(xyzImgColor.xyz_y) + ', ' + str(xyzImgColor.xyz_z)
+        print(f'Added {str(imgName)} with RGB value [{rgb}]')
 
-        # substract 1 to go to the next image
-        i -= 1
+        # append result to the block-storing JS object
+        outputTxt = open(dirname + '.js', 'a')
+        
+        # write to the .js file
+        outputTxt.write('    { id: "' + imgName + '", rgb: [' + rgb + '] },\n')
 
     # close the block-storing JS object and add a *beep* message
     outputTxt.write('];\n\nconsole.log("*beep* ' + dirname + '.js values initialized");')

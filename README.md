@@ -19,6 +19,6 @@ HueBlocks uses Minecraft Java Edition 1.21.4 (Jappa-nese) and 1.13.2 (Programmer
 <br><i>To get started, check <a href="https://github.com/1280px/hueblocks/tree/main/data/!!%20blox2rgb">readme.txt in blox2rgb folder</a> for more information</i>
 
 
-<br><h1>Legal Notice</h1>
+<h1>Legal Notice</h1>
 
 <b>All the textures included in this repo are extracted directly from various Minecraft Java Edition version and owned by and belong to Mojang Studios. I do not claim any rights on these, and all the textures provided are provided for demonstration purposes only!</b>
