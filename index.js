@@ -236,7 +236,25 @@ function blockVis() {
 	let stepVis = $('<img class="visImg" onclick="$(this).hide(200);" onmouseover="showPopup(this);" onmouseout="hidePopup(this);">');
 	const id = stepLeaders[stepCount];
 	const item = blockData.find(i => i.id === id.replace(".png"));
-	stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset + '/' + stepLeaders[stepCount]);
+	//Yes we have to do this terribly, yes it'll probally get slower as more mods are added
+	//I don't care, it works
+	//vanilla
+	if ($('#blocksPresetDD').val() == 'blocks_vanilla') {
+		
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset + '/' + stepLeaders[stepCount]);
+	}
+	//biomes o plenty
+	if ($('#blocksPresetDD').val() == 'blocks_biomes_o_plenty') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_biomes_o_plenty + '/' + stepLeaders[stepCount]);
+	}
+
+/* template for new mods, replace *MOD* with chosen mod name
+if ($('#blocksPresetDD').val() == 'blocks_*MOD*') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_*MOD*+ '/' + stepLeaders[stepCount]);
+	}
+*/
+
+
 	stepVis.attr('blockname', stepLeaders[stepCount].replace('.png', '').replace(/[-._]/g, ' '));
 	stepVis.css({'width': visSize + 'px', 'height': visSize + 'px'});
 
@@ -275,38 +293,58 @@ function hidePopup() {
 
 
 
-
 /* default values for block types and data */
-var blockset = 'blocks';
-var blockData = eval('blocks');
+//vanilla
+var blockset = 'blocks_vanilla';
+var blockData = eval('blocks_vanilla');
 var presetsLocation = eval('palettes');
+//Biomes O Plenty
+var blockset_biomes_o_plenty = 'blocks_biomes_o_plenty';
+var blockData_biomes_o_plenty = eval('blocks_biomes_o_plenty');
+
+/* template for new blockset and blockData, replace *MOD* with chosen mod name
+var blockset_*MOD* = 'blocks_*MOD*';
+var blockData_*MOD* = eval('blocks_*MOD*');
+*/
 
 /* palettes importer */
 function presetImport() {
 	/* wipe previous palettes */
 	$("option").remove();
 
-	/* create 'Default (1.21.4 blocks)' option if blockset = blocks */
-	if (blockset == 'blocks') {
+	//vanilla
+	if (blockset == 'blocks_vanilla') {
 		$('#blocksPresetDD').append(
 			$(document.createElement('option')).prop({
-				value: 'blocks',
-				text: 'Default (1.21.4 blocks)'
+				value: 'blocks_vanilla',
+				text: 'Vanilla Blocks'
 		}));
-	$('#blocksPresetDD').val('blocks');
+	$('#blocksPresetDD').val('blocks_vanilla');
 	blockData = eval( $('#blocksPresetDD').val() );
 	}
-
-	/* create 'Default (1.13.2 PA blocks)' option if blockset = blocks_pa */
-	if (blockset == 'blocks_pa') {
+	//biomes o plenty
+	if (blockset_biomes_o_plenty == 'blocks_biomes_o_plenty') {
 		$('#blocksPresetDD').append(
 			$(document.createElement('option')).prop({
-				value: 'blocks_pa',
-				text: 'Default (1.13.2 PA blocks)'
+				value: 'blocks_biomes_o_plenty',
+				text: 'Biomes o Plenty'
 		}));
-	$('#blocksPresetDD').val('blocks_pa');
-	blockData = eval( $('#blocksPresetDD').val());
+	$('#blocksPresetDD').val('blocks_biomes_o_plenty');
+	blockData_biomes_o_plenty = eval( $('#blocksPresetDD').val() );
 	}
+	
+/* template, replace *MOD* with chosen mod name
+	if (blockset_*MOD* == 'blocks_*MOD*') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_*MOD*',
+				text: '*MOD*'
+		}));
+	$('#blocksPresetDD').val('blocks_*MOD*');
+	blockData_*MOD* = eval( $('#blocksPresetDD').val() );
+	}
+*/
+
 
 	var presetImporter = 0;
 
@@ -341,10 +379,9 @@ $('#blocksPresetDD').change( () => {
 
 /* palette defaulter */
 function presetDefaulter() {
-	blockset == 'blocks_pa' ? $('#blocksPresetDD').val('blocks_pa') : $('#blocksPresetDD').val('blocks');
+	blockset == 'blocks_vanilla' ? $('#blocksPresetDD').val('blocks_vanilla') : $('#blocksPresetDD').val('blocks_vanilla');
 	blockData = eval( $('#blocksPresetDD').val() );
-	if (blockset == 'blocks') presetsLocation = eval('palettes');
-	if (blockset == 'blocks_pa') presetsLocation = eval('palettes_pa');
+	if (blockset == 'blocks_vanilla') presetsLocation = eval('palettes');
 }
 
 
@@ -615,8 +652,7 @@ $('#CPSelScreenClose').on('click', () => {
 
 /* blockset switcher */
 function blocksetSwitch() {
-	if ($('#blocksetSwitcher').is(':checked')) blockset = 'blocks_pa';
-	if (! $('#blocksetSwitcher').is(':checked')) blockset = 'blocks';
+	if ($('#blocksetSwitcher').is(':checked')) blockset = 'blocks_vanilla';
 
 	presetImport();
 

@@ -3,11 +3,12 @@
     <meta charset="utf-8">
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="index.css">
-    <title>HueBlocks</title>
+    <title>HueBlocks GTNH</title>
 </head><body>
 
 <header>
-	<h1 id="logo">HueBlocks</h1>
+	<h1 id="logo">HueBlocks for Greg Tech: New Horizens</h1>
+	<p>or older modded Minecraft in general.</p>
 	<h2>Create beautiful block gradients in a few clicks!</h2>
 		<div class="colorPicker">
 			<div id="colorPreview" style="background: #4b5a70;">
@@ -24,7 +25,7 @@
 			<div class="options">
 				<input type="checkbox" name="optNodub" id="optNodub" checked="checked"><label for="optNodub" id="optNodubBtn">Hide duplicates</label><br>
 				<input type="checkbox" name="optRKeep" id="optRKeep"><label for="optRKeep" id="optRKeepBtn">Keep previous results</label>
-				<p class="credits">2021–2025 | <a href="https://github.com/1280px/hueblocks/">source code</a> | <a href="https://github.com/1280px/hueblocks/graphs/contributors/">contributors</a> | <a href="https://1280px.github.io/hueblocks-new/">new version (β)</a></p>
+				<p class="credits"><a href="https://github.com/samiscool51/hueblocks-gtnh/">Greg Tech: New Horizens Wiki</a> | <a href="https://github.com/samiscool51/hueblocks-gtnh/">source code</a> | <a href="https://github.com/1280px/hueblocks/">Orginal version by 1280px</a></p>
 		</div></header>
 
 	<div class="ggBtnHandler"><button id="ggBtn" disabled="true">GENERATE BLOCKS GRADIENT</button>
@@ -32,13 +33,7 @@
 	<div class="visScaleBtns"><button id="visDownscale"><img src="./icon/zoom-out.svg" title="Downscale (0.5x)"></img></button><button id="visUpscale"><img src="./icon/zoom-in.svg" title="Upscale (2.0x)"></img></button></div>
 	<div class="bottomConfigs">
 		Palette: <select id="blocksPresetDD"><option value="blocks" selected="selected">Loading palettes...</option></select><img src="./icon/dd-arrow.svg" id="blocksPresetDDArrow" title="Downscale (0.5x)"></img>
-
-		<span style="margin: 0 11px">|</span>
-
-		<div id="blocksetSwitcherHandler"><input type="checkbox" id="blocksetSwitcher"></input><label for="blocksetSwitcher" id="blocksetSwitcherBtn"><!-- tip: tumblers are essentially just a little fancier checkboxes --></label><label for="blocksetSwitcher" style="order: 1;">Jappa-nese </label><label for="blocksetSwitcher" style="order: 3;"> Programmer's Art</label></div>
-
 		<span style="margin: 0 3px 0 9px">·</span>
-
 		<button id="CBBtn"><img src="./icon/preferences.svg" title="Custom Blockset"></img> Custom Blockset...</button>
 	</div>
 
@@ -67,12 +62,11 @@
 
 <script src="jquery-3.6.0.min.js"></script>
 
-<script src="./data/blocksets/blocks.js"></script>
-<script src="./data/blocksets/blocks_pa.js"></script>
+
+<script src="./data/blocksets/blocks_vanilla.js"></script>
+<script src="./data/blocksets/blocks_biomes_o_plenty.js"></script>
 
 <script src="./data/presets/palettes.js"></script>
-<script src="./data/presets/palettes_pa.js"></script>
-<script src="./data/presets/versions.js"></script>
 
 <script src="index.js"></script>
 </body></html>
