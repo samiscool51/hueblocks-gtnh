@@ -7,13 +7,13 @@
 HueBlocks-gtnh uses Minecraft's, and supported mod's; block textures to generate the gradient.
 <br><b><i>Not every single texture is included!</i></b> Transparent, biome/foliage-affected, complex or custom block states are not included.
 
-<br>If you want to add a custom blockset(-s) for a mod, you can use blox2rgb.py — a simple Python script for quick blocksets blockdata generation from PNG files. 
+<br>If you want to add a custom blockset(-s) for a mod, you can use blox2rgb.py — a simple Python script for quick blocksets blockdata generation from PNG files.<br>
 <br><i>To get started, check <a href="https://github.com/samiscool51/hueblocks-gtnh/tree/legacy/data/!!%20blox2rgb">readme.txt in blox2rgb folder</a> for more information</i>
 
 <h1>Known issues</h1>
-- blockVis only allows one blockset to be viewed at a time, this prevents the ability to mix and match blocks from multiple sets at the same time
-- Pallets are broken for some reason (no clue why, probably broke something) 
-- The `Custom Pallet` option only uses blocks from vanilla
+1. blockVis only allows one blockset to be viewed at a time, disallowing mix and matching blocks from multiple sets at the same time <br>
+2. Pallets are broken for some reason (no clue why, probably broke something) <br>
+3. The `Custom Pallet` option only uses blocks from vanilla <br>
 
 
 <h1>Legal Notice</h1>
