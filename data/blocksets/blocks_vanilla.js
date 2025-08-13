@@ -1,4 +1,4 @@
-/* generated at 2025-08-12 11:38:34.226448 */
+/* generated at 2025-08-13 10:39:36.753063 */
 
 var blocks_vanilla = [
     { id: "bedrock.png", rgb: [96, 96, 96] },
@@ -85,9 +85,6 @@ var blocks_vanilla = [
     { id: "planks_spruce.png", rgb: [107, 80, 47] },
     { id: "pumpkin_side.png", rgb: [200, 124, 28] },
     { id: "pumpkin_top.png", rgb: [197, 122, 26] },
-    { id: "purpur_block.png", rgb: [167, 123, 167] },
-    { id: "purpur_pillar.png", rgb: [171, 129, 171] },
-    { id: "purpur_pillar_top.png", rgb: [172, 130, 172] },
     { id: "quartz_block_bottom.png", rgb: [232, 228, 220] },
     { id: "quartz_block_chiseled.png", rgb: [232, 229, 221] },
     { id: "quartz_block_lines.png", rgb: [232, 228, 220] },

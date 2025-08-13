@@ -247,6 +247,13 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_biomes_o_plenty') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_biomes_o_plenty + '/' + stepLeaders[stepCount]);
 	}
+	
+	if ($('#blocksPresetDD').val() == 'blocks_Ztones') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Ztones+ '/' + stepLeaders[stepCount]);
+	}
+	if ($('#blocksPresetDD').val() == 'blocks_all') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_all+ '/' + stepLeaders[stepCount]);
+	}
 
 /* template for new mods, replace *MOD* with chosen mod name
 if ($('#blocksPresetDD').val() == 'blocks_*MOD*') {
@@ -301,6 +308,12 @@ var presetsLocation = eval('palettes');
 //Biomes O Plenty
 var blockset_biomes_o_plenty = 'blocks_biomes_o_plenty';
 var blockData_biomes_o_plenty = eval('blocks_biomes_o_plenty');
+//Ztones
+var blockset_Ztones = 'blocks_Ztones';
+var blockData_Ztones = eval('blocks_Ztones');
+//all
+var blockset_all = 'blocks_all';
+var blockData_all = eval('blocks_all');
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -311,7 +324,16 @@ var blockData_*MOD* = eval('blocks_*MOD*');
 function presetImport() {
 	/* wipe previous palettes */
 	$("option").remove();
-
+	//all
+	if (blockset_all == 'blocks_all') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_all',
+				text: 'All Blocks'
+		}));
+	$('#blocksPresetDD').val('blocks_all');
+	blockData_all = eval( $('#blocksPresetDD').val() );
+	}
 	//vanilla
 	if (blockset == 'blocks_vanilla') {
 		$('#blocksPresetDD').append(
@@ -332,7 +354,16 @@ function presetImport() {
 	$('#blocksPresetDD').val('blocks_biomes_o_plenty');
 	blockData_biomes_o_plenty = eval( $('#blocksPresetDD').val() );
 	}
-	
+	//Ztones
+	if (blockset_Ztones == 'blocks_Ztones') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_Ztones',
+				text: 'Ztones'
+		}));
+	$('#blocksPresetDD').val('blocks_Ztones');
+	blockData_Ztones = eval( $('#blocksPresetDD').val() );
+	}
 /* template, replace *MOD* with chosen mod name
 	if (blockset_*MOD* == 'blocks_*MOD*') {
 		$('#blocksPresetDD').append(
@@ -554,7 +585,7 @@ $('#blocksPresetDD').change(() => {
 
 		/* visualise all the available blocks in alphabetic order */
 		let CPselVisLetter = 'ибражы';
-
+		
 		for (let CPSelBlocksVis in blockData) {
 			if (CPselVisLetter != blockData[CPSelBlocksVis].id[0]) {
 
