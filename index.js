@@ -247,12 +247,17 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_biomes_o_plenty') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_biomes_o_plenty + '/' + stepLeaders[stepCount]);
 	}
-	
+	//Ztones
 	if ($('#blocksPresetDD').val() == 'blocks_Ztones') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Ztones+ '/' + stepLeaders[stepCount]);
 	}
+	//all
 	if ($('#blocksPresetDD').val() == 'blocks_all') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_all+ '/' + stepLeaders[stepCount]);
+	}
+	//chisel
+	if ($('#blocksPresetDD').val() == 'blocks_chisel') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_chisel+ '/' + stepLeaders[stepCount]);
 	}
 
 /* template for new mods, replace *MOD* with chosen mod name
@@ -314,6 +319,9 @@ var blockData_Ztones = eval('blocks_Ztones');
 //all
 var blockset_all = 'blocks_all';
 var blockData_all = eval('blocks_all');
+//chisel
+var blockset_chisel = 'blocks_chisel';
+var blockData_chisel = eval('blocks_chisel')
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -363,6 +371,16 @@ function presetImport() {
 		}));
 	$('#blocksPresetDD').val('blocks_Ztones');
 	blockData_Ztones = eval( $('#blocksPresetDD').val() );
+	}
+	//chisel
+	if (blockset_chisel == 'blocks_chisel') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_chisel',
+				text: 'Chisel'
+		}));
+	$('#blocksPresetDD').val('blocks_chisel');
+	blockData_chisel = eval( $('#blocksPresetDD').val() );
 	}
 /* template, replace *MOD* with chosen mod name
 	if (blockset_*MOD* == 'blocks_*MOD*') {
