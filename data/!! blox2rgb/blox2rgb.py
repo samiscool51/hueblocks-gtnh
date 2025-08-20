@@ -6,12 +6,39 @@ from colormath.color_conversions import convert_color
 import os
 import sys
 import datetime
+import argparse
 
 print('[][][][][] blox2rgb v3 [][][][][]\n')
 dirname = 'input'
 
+workingdirectory = os.getcwd()
 
+parser = argparse.ArgumentParser("blox2rgb.py")
+parser.add_argument("--batch", help="Batch mode, will automaticly batch process all folders", action='store_true')
+args = parser.parse_args()
 
+def Arguments():
+	if args.batch == True:
+		print("batchstuff")
+		processFolders()
+	else:
+		print("funny")
+		getDirname()
+		postConvert()
+
+def processFolders():
+	print("processing folders in:", workingdirectory)
+	[x[0] for x in os.walk(workingdirectory)]
+	things = next(os.walk('.'))[1]
+	for folders, folders2process in enumerate(things):
+		print("Now processing:",  folders2process)
+		global dirname
+		dirname = folders2process
+		checkmate()
+		
+		
+		
+		
 # start conversion again or quit
 def postConvert():
     global dirname
@@ -25,74 +52,71 @@ def postConvert():
 
 def converter():
     # create a new empty file
-    try:
-        outputTxt = open(dirname + '.js', 'x')
-    except FileExistsError:
-        input('\n[!] Warning -- "' + dirname + '.js" already exists. \nPress Enter to overwrite it... ')
+	try:
+		outputTxt = open(dirname + '.js', 'x')
+	except FileExistsError:
+		if args.batch == True:
+			print('')
+		else:
+			input('\n[!] Warning -- "' + dirname + '.js" already exists. \nPress Enter to overwrite it... ')
+	
+	outputTxt = open(dirname + '.js', 'w')
 
-    outputTxt = open(dirname + '.js', 'w')
+	# add timestamp
+	outputTxt.write('/* generated at ' + str(datetime.datetime.now()) + ' */\n\n')
 
-    # add timestamp
-    outputTxt.write('/* generated at ' + str(datetime.datetime.now()) + ' */\n\n')
+	# add starting part of a block-storing JS object
+	varName = dirname.removeprefix('data\\blocksets\\')
+	outputTxt.write('var ' + varName + ' = [\n')
+	outputTxt.close()
 
-    # add starting part of a block-storing JS object
-    varName = dirname.removeprefix('data\\blocksets\\')
-    outputTxt.write('var ' + varName + ' = [\n')
-    varName = dirname.removeprefix('data\\blocksets\\')
-    outputTxt.write('var ' + varName + ' = [\n')
-    outputTxt.close()
+	failedImgCnt = 0
 
-    failedImgCnt = 0
+	# cycle through the images starting from the LAST one until -1 is reached
+	for i in range(len(listImgFound)-1, 0, -1):
+		imgName = listImgFound[i]
 
-    # cycle through the images starting from the LAST one until -1 is reached
-    for i in range(len(listImgFound)-1, 0, -1):
-        imgName = listImgFound[i]
-
-        imgProc = Image.open('./' + dirname + '/' + imgName).convert('RGBA')
+		imgProc = Image.open('./' + dirname + '/' + imgName).convert('RGBA')
         
-        # XYZ Space for averaging colours.      (later converted back to rgb)
-        xyzSum = [0, 0, 0, 0]
-        imgExpld = list(imgProc.getdata());
-        count = 0
+		# XYZ Space for averaging colours.      (later converted back to rgb)
+		xyzSum = [0, 0, 0, 0]
+		imgExpld = list(imgProc.getdata());
+		count = 0
         
-        for a in imgExpld:
-            if a[3] != 0:  # skip empty pixel
-
-                # convert pixel from srgb to xzy
-                rgb = sRGBColor(a[0]/255, a[1]/255, a[2]/255)    #normalised values
-                xyz = convert_color(rgb, XYZColor, target_illuminant='d50')
-
-                xyzSum[0] += float(xyz.xyz_x)       #|
-                xyzSum[1] += float(xyz.xyz_y)       #|
-                xyzSum[2] += float(xyz.xyz_z)       #| sum with total
-                xyzSum[3] += a[3]                   #|
-                count += 1
+		for a in imgExpld:
+			if a[3] != 0:  # skip empty pixel
+				# convert pixel from srgb to xzy
+				rgb = sRGBColor(a[0]/255, a[1]/255, a[2]/255)    #normalised values
+				xyz = convert_color(rgb, XYZColor, target_illuminant='d50')
+				xyzSum[0] += float(xyz.xyz_x)       #|
+				xyzSum[1] += float(xyz.xyz_y)       #|
+				xyzSum[2] += float(xyz.xyz_z)       #| sum with total
+				xyzSum[3] += a[3]                   #|
+				count += 1
         # (semi-transparent blocks aren't allowed, because they work REALLY
         # BAD for buildings; I'll leave the code for computation alpha channel
         # here, but, as of now, it is not used...)
 
         # divide by imgExpld.len()
-        imgColor = [xyzSum[0]/count, xyzSum[1]/count, xyzSum[2]/count, xyzSum[3]/count]
+		imgColor = [xyzSum[0]/count, xyzSum[1]/count, xyzSum[2]/count, xyzSum[3]/count]
 
         # convert from XYZ to sRGB
-        xyzImgColor = XYZColor(imgColor[0], imgColor[1], imgColor[2])
-        rgbImgColor = convert_color(xyzImgColor, sRGBColor)
-        
-        rgb = str(round(rgbImgColor.rgb_r * 255)) + ', ' + str(round(rgbImgColor.rgb_g * 255)) + ', ' + str(round(rgbImgColor.rgb_b * 255))
-        xyz = str(xyzImgColor.xyz_x) + ', ' + str(xyzImgColor.xyz_y) + ', ' + str(xyzImgColor.xyz_z)
-        print(f'Added {str(imgName)} with RGB value [{rgb}]')
+		xyzImgColor = XYZColor(imgColor[0], imgColor[1], imgColor[2])
+		rgbImgColor = convert_color(xyzImgColor, sRGBColor)
+		rgb = str(round(rgbImgColor.rgb_r * 255)) + ', ' + str(round(rgbImgColor.rgb_g * 255)) + ', ' + str(round(rgbImgColor.rgb_b * 255))
+		xyz = str(xyzImgColor.xyz_x) + ', ' + str(xyzImgColor.xyz_y) + ', ' + str(xyzImgColor.xyz_z)
+		print(f'Added {str(imgName)} with RGB value [{rgb}]')
 
         # append result to the block-storing JS object
-        outputTxt = open(dirname + '.js', 'a')
+		outputTxt = open(dirname + '.js', 'a')
         
         # write to the .js file
-        outputTxt.write('    { id: "' + imgName + '", rgb: [' + rgb + '] },\n')
+		outputTxt.write('    { id: "' + imgName + '", rgb: [' + rgb + '] },\n')
 
     # close the block-storing JS object and add a *beep* message
-    outputTxt.write('];\n\nconsole.log("*beep* ' + dirname + '.js values initialized");')
-    outputTxt.close()
-    print('\n[][][][][] Conversion finished --', str(len(listImgFound) -failedImgCnt), '/', str(len(listImgFound)), 'textures converted.')
-    postConvert()
+	outputTxt.write('];\n\nconsole.log("*beep* ' + dirname + '.js values initialized");')
+	outputTxt.close()
+	print('\n[][][][][] Conversion finished --', str(len(listImgFound) -failedImgCnt), '/', str(len(listImgFound)), 'textures converted.')
 
 
 
@@ -128,4 +152,4 @@ def getDirname():
         getDirname()
     else:
         checkmate()
-getDirname()
+Arguments()

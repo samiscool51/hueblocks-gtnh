@@ -1,6 +1,5 @@
-/* generated at 2025-08-13 10:39:36.753063 */
+/* generated at 2025-08-20 11:19:33.740093 */
 
-var blocks_vanilla = [
 var blocks_vanilla = [
     { id: "bedrock.png", rgb: [96, 96, 96] },
     { id: "bookshelf.png", rgb: [124, 102, 75] },

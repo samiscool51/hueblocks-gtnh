@@ -1,6 +1,5 @@
-/* generated at 2025-08-14 10:29:10.936445 */
+/* generated at 2025-08-20 11:19:35.684894 */
 
-var blocks_chisel = [
 var blocks_chisel = [
     { id: "acacia-planks-blinds.png", rgb: [144, 76, 31] },
     { id: "acacia-planks-chaotic-hor.png", rgb: [142, 76, 30] },
