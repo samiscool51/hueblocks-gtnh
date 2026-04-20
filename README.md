@@ -1,4 +1,4 @@
-<p align=center><a href="https://samiscool51.github.io/hueblocks-gtnh"><img src="https://raw.githubusercontent.com/samiscool51/hueblocks-gtnh/refs/heads/legacy/CoolHeader.png"></a><br>
+<p align=center><a href="https://samiscool51.github.io/hueblocks-gtnh"><img src="https://raw.githubusercontent.com/samiscool51/hueblocks-gtnh/refs/heads/main/CoolHeader.png"></a><br>
 <i>Create beautiful block gradients in a few clicks! <a href="https://samiscool51.github.io/hueblocks-gtnh/">Web version available here</a></i></p>
 
 <b>HueBlocks-gtnh is an online Modded Minecraft block gradients generator powered by jQuery, Python and BrainTech Aerospace Advanced Reinforced Duct Tape. </b>
