@@ -259,6 +259,16 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_chisel') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_chisel+ '/' + stepLeaders[stepCount]);
 	}
+	//et fut base
+	if ($('#blocksPresetDD').val() == 'blocks_et_futurum_requiem_base') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_et_futurum_requiem_base+ '/' + stepLeaders[stepCount]);
+	}
+	//et fut matal barrels
+	if ($('#blocksPresetDD').val() == 'blocks_et_futurum_requiem_metal_barrels') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_et_futurum_requiem_metal_barrels+ '/' + stepLeaders[stepCount]);
+	}
+
+
 
 /* template for new mods, replace *MOD* with chosen mod name
 if ($('#blocksPresetDD').val() == 'blocks_*MOD*') {
@@ -322,6 +332,13 @@ var blockData_all = eval('blocks_all');
 //chisel
 var blockset_chisel = 'blocks_chisel';
 var blockData_chisel = eval('blocks_chisel')
+//et fut base
+var blockset_et_futurum_requiem_base = 'blocks_et_futurum_requiem_base';
+var blockData_et_futurum_requiem_base = eval('blocks_et_futurum_requiem_base');
+//et fut metal battels
+var blockset_et_futurum_requiem_metal_barrels = 'blocks_et_futurum_requiem_metal_barrels';
+var blockData_et_futurum_requiem_metal_barrels = eval('blocks_et_futurum_requiem_metal_barrels');
+
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -382,6 +399,27 @@ function presetImport() {
 	$('#blocksPresetDD').val('blocks_chisel');
 	blockData_chisel = eval( $('#blocksPresetDD').val() );
 	}
+	//et fut base
+	if (blockset_et_futurum_requiem_base == 'blocks_et_futurum_requiem_base') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_et_futurum_requiem_base',
+				text: 'Et Futurum Requiem'
+			}));
+		$('#blocksPresetDD').val('blocks_et_futurum_requiem_base');
+		blockData_et_futurum_requiem_base = eval( $('#blocksPresetDD').val() );
+	}
+	//et fut metal barrels
+	if (blockset_et_futurum_requiem_metal_barrels == 'blocks_et_futurum_requiem_metal_barrels') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_et_futurum_requiem_metal_barrels',
+				text: 'Et Futurum Requiem Metal Barrels'
+			}));
+		$('#blocksPresetDD').val('blocks_et_futurum_requiem_metal_barrels');
+		blockData_et_futurum_requiem_base = eval( $('#blocksPresetDD').val() );
+	}
+
 /* template, replace *MOD* with chosen mod name
 	if (blockset_*MOD* == 'blocks_*MOD*') {
 		$('#blocksPresetDD').append(
