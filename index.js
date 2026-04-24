@@ -267,6 +267,9 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_et_futurum_requiem_metal_barrels') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_et_futurum_requiem_metal_barrels+ '/' + stepLeaders[stepCount]);
 	}
+	if ($('#blocksPresetDD').val() == 'blocks_natura') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_natura+ '/' + stepLeaders[stepCount]);
+	}
 
 
 
@@ -338,7 +341,9 @@ var blockData_et_futurum_requiem_base = eval('blocks_et_futurum_requiem_base');
 //et fut metal battels
 var blockset_et_futurum_requiem_metal_barrels = 'blocks_et_futurum_requiem_metal_barrels';
 var blockData_et_futurum_requiem_metal_barrels = eval('blocks_et_futurum_requiem_metal_barrels');
-
+//Natura
+var blockset_natura = 'blocks_natura';
+var blockData_natura = eval('blocks_natura');
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -418,6 +423,16 @@ function presetImport() {
 			}));
 		$('#blocksPresetDD').val('blocks_et_futurum_requiem_metal_barrels');
 		blockData_et_futurum_requiem_base = eval( $('#blocksPresetDD').val() );
+	}
+	//Natura
+	if (blockset_natura == 'blocks_natura') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_natura',
+				text: 'Natura'
+			}));
+		$('#blocksPresetDD').val('blocks_natura');
+		blockData_natura = eval( $('#blocksPresetDD').val() );
 	}
 
 /* template, replace *MOD* with chosen mod name
