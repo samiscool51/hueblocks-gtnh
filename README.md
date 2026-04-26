@@ -14,7 +14,7 @@ Transparent, biome/foliage-affected, animated, connected textures variants, comp
 <h1>I don't know man</h1>
 I edited this existing... app? site? project? whatever, I edited it so it could use modded blocks since it's original had the ability to load different texture sets easily. It's the only open source block gradient... thing, that I could find at all, let alone modify. So many Minecraft creative tools do <i><b>NOT</b></i> support mods and it's unfair to modded players who need these tools for their builds.
 
-Yes, I know my modifications are terrible, I'm not a programer. I just got sick and tired of not having usable tools and I'm sure there are others as well. The project isn't flexible in many ways as it was only intended for vanilla Minecraft. The blockVis and blockSet systems expect people to only use <b>either</b> Programer art or New art, not both at the same time.
+Yes, I know my modifications are terrible, I'm not a programmer. I just got sick and tired of not having usable tools and I'm sure there are others as well. The project isn't flexible in many ways as it was only intended for vanilla Minecraft. The blockVis and blockSet systems expect people to only use <b>either</b> Programmer art or New art, not both at the same time.
 
 But I'm sure would have looked at the source, and found that it has a newer version, and may be asking: "Why didn't you use that?" Simple. It <i><b>remotely</b></i> fetches the textures from Mojangs servers and has no 'local' texture functionality. While someone could program that in, I can't.
 
@@ -24,18 +24,16 @@ Thank you for coming to my TED talk/rant.
 
 <h1>Known issues</h1>
 
-- blockVis only allows one blockset to be viewed at a time, disallowing mix and matching blocks from multiple sets at the same time.
-- Pallets are broken for some reason (no clue why, probably broke something).
-- The `Custom Pallet` option only uses blocks from vanilla.
+- blockVis only allows one blockset to be viewed at a time, disallowing mix and matching blocks from multiple sets at the same time. (probably for the best)
 - Animated textures and textures with custom blockstates or texture layouts aren't supported
-- The GregTech mod tints block materials and uses gray base textures for them. As a result, each block will need to be custom made into a compatiable texture.
-- Block names don't reflect their in-game name, Will have to rename ***EVERY*** texture for fix this.
+- The GregTech mod tints some block materials and uses gray base textures for them. As a result, each block will need to be custom made into a compatible texture. This doesn't include some blocks (e.g marble) but greg tech's handling of textures is nightmarish and those blocks will need time to be found and sorted out.
+- Block names don't reflect their in-game name, Will have to rename ***DAMN NEAR EVERY*** texture for fix this.
 
 <h1>Feature ideas/future plans</h1>
-Unsure how to implment.
+Unsure how to implement.
 
 - Import and export pallet selections as files for easy sharing.
-- Documentation on how to add new mods/blocksets (Github's built-in Wiki feature should be a good implementation)
+- A better way to dynamically add new blocksets along with accompanying documentation.
 - More mods (in the works)
 
 <h1>Legal Notice</h1>

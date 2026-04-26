@@ -1,8 +1,18 @@
 /* change JS error message to a loading message */
 $('#colorPreviewText').html('Loading...');
 
+const isMobileUserAgent = () => {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
 
+if (isMobileUserAgent()) {
+	alert("WARNING!\nHueblocks-GTNH is designed for Desktop use.\nMobile use is not supported.\nPlease keep this in mind while using Hueblocks-GTNH.");
 
+}
+else {
+	//alert("WARNING!\nHueblocks-GTNH is designed for Desktop use.\nMobile use is not supported.\nPlease keep this in mind while using Hueblocks-GTNH.");
+
+}
 
 
 /* colour picker with gradient preview */
@@ -451,8 +461,8 @@ function presetImport() {
 	var presetImporter = 0;
 
 	presetDefaulter();
-
-	while (presetImporter < presetsLocation.length) {
+// disabled cause it'll cause too much block loading and will rate limit the user. also it only gets vanilla textures.
+	/* while (presetImporter < presetsLocation.length) {
 
 		$('#blocksPresetDD').append(
 			$(document.createElement('option')).prop({
@@ -461,14 +471,7 @@ function presetImport() {
 			}));
 		presetImporter += 1;
 	}
-
-	/* add 'Custom palette...' option when all palettes are imported */
-	$('#blocksPresetDD').append(
-		$(document.createElement('option')).prop({
-			value: 'customPreset',
-			text: 'Custom palette...'
-		})
-	);
+*/
 }
 presetImport();
 
@@ -481,9 +484,9 @@ $('#blocksPresetDD').change( () => {
 
 /* palette defaulter */
 function presetDefaulter() {
-	blockset == 'blocks_vanilla' ? $('#blocksPresetDD').val('blocks_vanilla') : $('#blocksPresetDD').val('blocks_vanilla');
+	blockset == 'blocks_all' ? $('#blocksPresetDD').val('blocks_all') : $('#blocksPresetDD').val('blocks_all');
 	blockData = eval( $('#blocksPresetDD').val() );
-	if (blockset == 'blocks_vanilla') presetsLocation = eval('palettes');
+	if (blockset == 'blocks_all') presetsLocation = eval('palettes');
 }
 
 
