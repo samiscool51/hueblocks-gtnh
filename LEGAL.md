@@ -14,3 +14,9 @@ Et Futurum Requiem's textures were extracted directly from Et Futurum Requiem ve
 
 Natura's textures were extracted directly from Natura version 2.7.6, and is owned by and was originally created by mDiyo.<br />
 
+Tinkers Construct's textures were extracted directly from Tinkers Construct version 1.12.18-GTNH, and is owned by and was originally created by mDiyo.<br />
+
+Witchery's textures were extracted directly from Witchery version 0.24.1, and is owned by and was originally created by Emoniph.<br />
+
+Extra Utilities' textures were extracted directly from Extra Utilities version 1.2.13a, and is owned by and was originally created by RWTema.<br />
+

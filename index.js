@@ -277,8 +277,21 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_et_futurum_requiem_metal_barrels') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_et_futurum_requiem_metal_barrels+ '/' + stepLeaders[stepCount]);
 	}
+	//natura
 	if ($('#blocksPresetDD').val() == 'blocks_natura') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_natura+ '/' + stepLeaders[stepCount]);
+	}
+	//witchery
+	if ($('#blocksPresetDD').val() == 'blocks_witchery') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_witchery+ '/' + stepLeaders[stepCount]);
+	}
+	//witchery
+	if ($('#blocksPresetDD').val() == 'blocks_tinkers_construct') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_tinkers_construct+ '/' + stepLeaders[stepCount]);
+	}
+	//extra utilities
+	if ($('#blocksPresetDD').val() == 'blocks_extra_utilities') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_extra_utilities + '/' + stepLeaders[stepCount]);
 	}
 
 
@@ -354,6 +367,15 @@ var blockData_et_futurum_requiem_metal_barrels = eval('blocks_et_futurum_requiem
 //Natura
 var blockset_natura = 'blocks_natura';
 var blockData_natura = eval('blocks_natura');
+//witchery
+var blockset_witchery = 'blocks_witchery';
+var blockData_witchery = eval('blocks_witchery');
+//tinkers constuct
+var blockset_tinkers_construct = 'blocks_tinkers_construct';
+var blockData_tinkers_construct = eval('blocks_tinkers_construct');
+//extra utilities
+var blockset_extra_utilities = 'blocks_extra_utilities';
+var blockData_extra_utilities = eval('blocks_extra_utilities');
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -443,6 +465,36 @@ function presetImport() {
 			}));
 		$('#blocksPresetDD').val('blocks_natura');
 		blockData_natura = eval( $('#blocksPresetDD').val() );
+	}
+	//witchery
+	if (blockset_witchery == 'blocks_witchery') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_witchery',
+				text: 'Witchery'
+			}));
+		$('#blocksPresetDD').val('blocks_witchery');
+		blockData_witchery = eval( $('#blocksPresetDD').val() );
+	}
+	//tinkers construct
+	if (blockset_tinkers_construct == 'blocks_tinkers_construct') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_tinkers_construct',
+				text: 'Tinkers Construct'
+			}));
+		$('#blocksPresetDD').val('blocks_tinkers_construct');
+		blockData_tinkers_construct = eval( $('#blocksPresetDD').val() );
+	}
+	//extra utilities
+	if (blockset_extra_utilities == 'blocks_extra_utilities') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_extra_utilities',
+				text: 'Extra Utilities'
+			}));
+		$('#blocksPresetDD').val('blocks_extra_utilities');
+		blockData_extra_utilities = eval( $('#blocksPresetDD').val() );
 	}
 
 /* template, replace *MOD* with chosen mod name
