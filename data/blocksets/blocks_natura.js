@@ -1,4 +1,4 @@
-/* generated at 2026-04-24 15:17:13.683937 */
+/* generated at 2026-04-28 08:34:09.754651 */
 
 var blocks_natura = [
     { id: "natura_air_sulfur.png", rgb: [221, 165, 156] },
@@ -194,10 +194,6 @@ var blocks_natura = [
     { id: "natura_redwood_workbench_face.png", rgb: [157, 110, 86] },
     { id: "natura_redwood_workbench_side.png", rgb: [158, 103, 73] },
     { id: "natura_redwood_workbench_top.png", rgb: [131, 83, 49] },
-    { id: "natura_saguaro_bottom.png", rgb: [150, 154, 55] },
-    { id: "natura_saguaro_fruit.png", rgb: [152, 61, 61] },
-    { id: "natura_saguaro_side.png", rgb: [100, 140, 19] },
-    { id: "natura_saguaro_top.png", rgb: [104, 145, 19] },
     { id: "natura_sakura_bark.png", rgb: [88, 50, 6] },
     { id: "natura_sakura_bookshelf.png", rgb: [132, 115, 94] },
     { id: "natura_sakura_heart.png", rgb: [169, 151, 124] },
@@ -232,7 +228,6 @@ var blocks_natura = [
     { id: "natura_tainted_farmland_dry.png", rgb: [38, 19, 55] },
     { id: "natura_tainted_farmland_heated.png", rgb: [83, 51, 100] },
     { id: "natura_tainted_soil.png", rgb: [75, 34, 53] },
-    { id: "natura_thornvine.png", rgb: [180, 159, 67] },
     { id: "natura_tiger_bark.png", rgb: [55, 50, 36] },
     { id: "natura_tiger_bookshelf.png", rgb: [120, 99, 74] },
     { id: "natura_tiger_heart.png", rgb: [155, 125, 82] },
