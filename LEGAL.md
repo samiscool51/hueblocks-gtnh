@@ -20,3 +20,11 @@ Witchery's textures were extracted directly from Witchery version 0.24.1, and is
 
 Extra Utilities' textures were extracted directly from Extra Utilities version 1.2.13a, and is owned by and was originally created by RWTema.<br />
 
+Botania's textures were extracted directly from Botania version 1.11.7-GTNH, and is owned by and was originally created by Vazkii.<br />
+
+Project Red: Explorations' textures were extracted directly from Project Red: Explorations version 4.11.0-GTNH, and is owned by and was originally created by MrTJP.<br />
+
+
+Thaumcraft's textures were extracted directly from Thaumcraft version 4.2.3.5a, and is owned by and was originally created by Azanor13. However due to Azanor using copyrighted textures for various blocks, many of which are under unknown copyright and ownership, it is unknown which textures are created and owned by Azanor, and which were used without permission. If information is bought to light on the copyright of various textures, this legal notice will be updated accordingly.<br />
+
+

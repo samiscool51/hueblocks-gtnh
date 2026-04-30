@@ -293,6 +293,18 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_extra_utilities') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_extra_utilities + '/' + stepLeaders[stepCount]);
 	}
+	//botania
+	if ($('#blocksPresetDD').val() == 'blocks_botania') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_botania+ '/' + stepLeaders[stepCount]);
+	}
+	//project_red_exploration
+	if ($('#blocksPresetDD').val() == 'blocks_project_red_exploration') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_project_red_exploration+ '/' + stepLeaders[stepCount]);
+	}
+	//thaumcraft
+	if ($('#blocksPresetDD').val() == 'blocks_thaumcraft') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_thaumcraft+ '/' + stepLeaders[stepCount]);
+	}
 
 
 
@@ -376,6 +388,15 @@ var blockData_tinkers_construct = eval('blocks_tinkers_construct');
 //extra utilities
 var blockset_extra_utilities = 'blocks_extra_utilities';
 var blockData_extra_utilities = eval('blocks_extra_utilities');
+//botania
+var blockset_botania = 'blocks_botania';
+var blockData_botania = eval('blocks_botania');
+//project_red_exploration
+var blockset_project_red_exploration = 'blocks_project_red_exploration';
+var blockData_project_red_exploration = eval('blocks_project_red_exploration');
+//thaumcraft
+var blockset_thaumcraft = 'blocks_thaumcraft';
+var blockData_thaumcraft = eval('blocks_thaumcraft');
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -495,6 +516,36 @@ function presetImport() {
 			}));
 		$('#blocksPresetDD').val('blocks_extra_utilities');
 		blockData_extra_utilities = eval( $('#blocksPresetDD').val() );
+	}
+	//botania
+	if (blockset_botania == 'blocks_botania') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_botania',
+				text: 'Botania'
+			}));
+		$('#blocksPresetDD').val('blocks_botania');
+		blockData_botania = eval( $('#blocksPresetDD').val() );
+	}
+	//project_red_exploration
+	if (blockset_project_red_exploration == 'blocks_project_red_exploration') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_project_red_exploration',
+				text: 'Project Red: Exploration'
+			}));
+		$('#blocksPresetDD').val('blocks_project_red_exploration');
+		blockData_project_red_exploration = eval( $('#blocksPresetDD').val() );
+	}
+	//thaumcraft
+	if (blockset_thaumcraft == 'blocks_thaumcraft') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'blocks_thaumcraft',
+				text: 'Thaumcraft'
+			}));
+		$('#blocksPresetDD').val('blocks_thaumcraft');
+		blockData_thaumcraft = eval( $('#blocksPresetDD').val() );
 	}
 
 /* template, replace *MOD* with chosen mod name

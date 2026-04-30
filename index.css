@@ -139,7 +139,7 @@ small {
 #cLenght1, #cLenght2, #cLenght3 {
 	display: none;
 }
-#cLenghtBtn1, #cLenghtBtn2, #cLenghtBtn3 {
+#cLenghtBtn1, #cLenghtBtn2, #cLenghtBtn3{
 	display: inline-block;
 	width: 124px;
 	margin: -4px 8px 4px;	padding: 11px 0;
@@ -150,7 +150,7 @@ small {
 	border: 2px solid #fff9;	border-radius: 4px;
 	box-shadow: 0 0 0 0 #fff0;
 }
-#cLenghtBtn1:hover, #cLenghtBtn2:hover, #cLenghtBtn3:hover {
+#cLenghtBtn1:hover, #cLenghtBtn2:, #cLenghtBtn3:hover {
 	background-color: #fff3;
 	border: 2px solid #fff0;
 }
