@@ -9,7 +9,7 @@ html, body {
 }
 header {
 	display: block;
-	height: 440px;
+	height: 480px;
 	background: linear-gradient(#000628, #1b1e49);
 	color: #fff;
 	text-align: center;
@@ -24,11 +24,9 @@ h2 {
 	margin: 10px 0px 20px;
 }
 p, em {
-	color: #fff4;
 	font-size: 12px;
 }
 a {
-	color: #fff4 !important;
 	transition: 200ms;
 }
 a:hover {
@@ -133,16 +131,16 @@ small {
 
 .lenghtPicker {
 	width: 460px;
-	margin-left: 20px;
+	margin-left: 0px;
 	border-right: 1px solid #fff2;
 }
-#cLenght1, #cLenght2, #cLenght3 {
+#cLenght1, #cLenght2, #cLenght3, #cLenght4 {
 	display: none;
 }
-#cLenghtBtn1, #cLenghtBtn2, #cLenghtBtn3{
+#cLenghtBtn1, #cLenghtBtn2, #cLenghtBtn3, #cLenghtBtn4 {
 	display: inline-block;
 	width: 124px;
-	margin: -4px 8px 4px;	padding: 11px 0;
+	margin: -4px 8px 11px;	padding: 11px 0;
 	user-select: none;
 	transition: 200ms;
 	font-weight: 700;
@@ -150,17 +148,17 @@ small {
 	border: 2px solid #fff9;	border-radius: 4px;
 	box-shadow: 0 0 0 0 #fff0;
 }
-#cLenghtBtn1:hover, #cLenghtBtn2:, #cLenghtBtn3:hover {
+#cLenghtBtn1:hover, #cLenghtBtn2:, #cLenghtBtn3:hover, #cLenghtBtn4:hover {
 	background-color: #fff3;
 	border: 2px solid #fff0;
 }
-#cLenghtBtn1:hover:active, #cLenghtBtn2:hover:active, #cLenghtBtn3:hover:active {
+#cLenghtBtn1:hover:active, #cLenghtBtn2:hover:active, #cLenghtBtn3:hover:active, #cLenghtBtn4:hover:active {
 	background-color: #fff !important;
 	color: #151942 !important;
 	border: 2px solid #fff !important;
 	box-shadow: 0 0 0 2px #fff9 !important;
 }
-#cLenght1:checked+label, #cLenght2:checked+label, #cLenght3:checked+label {
+#cLenght1:checked+label, #cLenght2:checked+label, #cLenght3:checked+label, #cLenght4:checked+label {
 	background-color: #fff;
 	color: #151942;
 	border: 2px solid #fff;
@@ -168,7 +166,6 @@ small {
 }
 
 .options {
-	width: 240px;
 	text-align: left;
 	margin-top: -4px;
 }
@@ -200,7 +197,7 @@ small {
 	margin: 5px;
 }
 .credits {
-	margin: 18px 10px 0 18px;
+	margin: 10px 10px 0 18px;
 	font-size: 12px;
 }
 

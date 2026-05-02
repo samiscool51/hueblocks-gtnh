@@ -161,6 +161,8 @@ function updateSteps() {
 	/* take steps count from non-custom button (must be at least 3, otherwise just makes no sense) */
 	if ($('#cLenght1').is(':checked')) stepLen = 9;
 	if ($('#cLenght2').is(':checked')) stepLen = 25;
+	if ($('#cLenght4').is(':checked')) stepLen = 99;
+
 
 	/* wipe previous steps */
 	steps = [];
