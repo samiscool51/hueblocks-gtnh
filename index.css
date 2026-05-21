@@ -25,6 +25,7 @@ h2 {
 }
 p, em {
 	font-size: 12px;
+	margin: 0px 0px 10px;
 }
 a {
 	transition: 200ms;
@@ -126,7 +127,7 @@ small {
 	display: flex;
 	max-width: 720px;
 	margin: auto;
-	padding: 14px 0;
+	padding: 14px 0px;
 }
 
 .lenghtPicker {

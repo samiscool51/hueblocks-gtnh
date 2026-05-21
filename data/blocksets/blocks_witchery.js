@@ -1,4 +1,4 @@
-/* generated at 2026-04-28 08:34:13.302589 */
+/* generated at 2026-05-21 10:52:50.849151 */
 
 var blocks_witchery = [
     { id: "witchery_altar.png", rgb: [153, 153, 153] },

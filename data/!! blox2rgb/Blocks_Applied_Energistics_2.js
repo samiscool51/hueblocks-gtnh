@@ -1,0 +1,36 @@
+/* generated at 2026-05-21 10:52:45.203359 */
+
+var Blocks_Applied_Energistics_2 = [
+    { id: "Applied_Energistics_2_BlockCreativeEnergyCell.png", rgb: [109, 109, 110] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell.png", rgb: [135, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell0.png", rgb: [124, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell1.png", rgb: [127, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell2.png", rgb: [131, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell3.png", rgb: [135, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell4.png", rgb: [139, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell5.png", rgb: [143, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell6.png", rgb: [148, 115, 160] },
+    { id: "Applied_Energistics_2_BlockDenseEnergyCell7.png", rgb: [152, 115, 159] },
+    { id: "Applied_Energistics_2_BlockEnergyAcceptor.png", rgb: [140, 138, 141] },
+    { id: "Applied_Energistics_2_BlockEnergyCell.png", rgb: [123, 132, 152] },
+    { id: "Applied_Energistics_2_BlockEnergyCell0.png", rgb: [127, 132, 141] },
+    { id: "Applied_Energistics_2_BlockEnergyCell1.png", rgb: [126, 132, 144] },
+    { id: "Applied_Energistics_2_BlockEnergyCell2.png", rgb: [125, 132, 147] },
+    { id: "Applied_Energistics_2_BlockEnergyCell3.png", rgb: [123, 132, 152] },
+    { id: "Applied_Energistics_2_BlockEnergyCell4.png", rgb: [122, 130, 155] },
+    { id: "Applied_Energistics_2_BlockEnergyCell5.png", rgb: [121, 127, 159] },
+    { id: "Applied_Energistics_2_BlockEnergyCell6.png", rgb: [121, 125, 164] },
+    { id: "Applied_Energistics_2_BlockEnergyCell7.png", rgb: [122, 121, 164] },
+    { id: "Applied_Energistics_2_BlockFluix.png", rgb: [147, 80, 184] },
+    { id: "Applied_Energistics_2_BlockQuartz.png", rgb: [212, 222, 241] },
+    { id: "Applied_Energistics_2_BlockQuartzChiseled.png", rgb: [199, 211, 235] },
+    { id: "Applied_Energistics_2_BlockQuartzChiseledSide.png", rgb: [198, 211, 236] },
+    { id: "Applied_Energistics_2_BlockQuartzPillar.png", rgb: [204, 214, 238] },
+    { id: "Applied_Energistics_2_BlockQuartzPillarSide.png", rgb: [202, 213, 237] },
+    { id: "Applied_Energistics_2_BlockQuartzTorch.png", rgb: [206, 233, 251] },
+    { id: "Applied_Energistics_2_BlockSkyStone.Block.png", rgb: [74, 75, 75] },
+    { id: "Applied_Energistics_2_BlockSkyStone.Brick.png", rgb: [75, 75, 75] },
+    { id: "Applied_Energistics_2_BlockSkyStone.SmallBrick.png", rgb: [74, 75, 75] },
+];
+
+console.log("*beep* Blocks_Applied_Energistics_2.js values initialized");

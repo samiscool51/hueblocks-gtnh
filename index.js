@@ -307,6 +307,142 @@ function blockVis() {
 	if ($('#blocksPresetDD').val() == 'blocks_thaumcraft') {
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_thaumcraft+ '/' + stepLeaders[stepCount]);
 	}
+	//Amun-Ra
+	if ($('#blocksPresetDD').val() == 'Blocks_Amun_Ra') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Amun_Ra+ '/' + stepLeaders[stepCount]);
+	}
+	//Applied_Energistics_2
+	if ($('#blocksPresetDD').val() == 'Blocks_Applied_Energistics_2') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Applied_Energistics_2+ '/' + stepLeaders[stepCount]);
+	}
+	//Automagy
+	if ($('#blocksPresetDD').val() == 'Blocks_Automagy') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Automagy+ '/' + stepLeaders[stepCount]);
+	}
+	//Avaritia
+	if ($('#blocksPresetDD').val() == 'Blocks_Avaritia') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Avaritia+ '/' + stepLeaders[stepCount]);
+	}
+	//BartWorks
+	if ($('#blocksPresetDD').val() == 'Blocks_BartWorks') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_BartWorks+ '/' + stepLeaders[stepCount]);
+	}
+	//Blood_Magic
+	if ($('#blocksPresetDD').val() == 'Blocks_Blood_Magic') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Blood_Magic+ '/' + stepLeaders[stepCount]);
+	}
+	//Botany
+	if ($('#blocksPresetDD').val() == 'Blocks_Botany') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Botany+ '/' + stepLeaders[stepCount]);
+	}
+	//Cooking_For_Blockheads
+	if ($('#blocksPresetDD').val() == 'Blocks_Cooking_For_Blockheads') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Cooking_For_Blockheads+ '/' + stepLeaders[stepCount]);
+	}
+	//Draconic_Evolution
+	if ($('#blocksPresetDD').val() == 'Blocks_Draconic_Evolution') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Draconic_Evolution+ '/' + stepLeaders[stepCount]);
+	}
+	//Ender_IO
+	if ($('#blocksPresetDD').val() == 'Blocks_Ender_IO') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Ender_IO+ '/' + stepLeaders[stepCount]);
+	}
+	//Forbidden_Magic
+	if ($('#blocksPresetDD').val() == 'Blocks_Forbidden_Magic') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Forbidden_Magic+ '/' + stepLeaders[stepCount]);
+	}
+	//Forestry
+	if ($('#blocksPresetDD').val() == 'Blocks_Forestry') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Forestry+ '/' + stepLeaders[stepCount]);
+	}
+	//Galacticraft_Asteroids
+	if ($('#blocksPresetDD').val() == 'Blocks_Galacticraft_Asteroids') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Galacticraft_Asteroids+ '/' + stepLeaders[stepCount]);
+	}
+	//Galacticraft_Core
+	if ($('#blocksPresetDD').val() == 'Blocks_Galacticraft_Core') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Galacticraft_Core+ '/' + stepLeaders[stepCount]);
+	}
+	//Galacticraft_Mars
+	if ($('#blocksPresetDD').val() == 'Blocks_Galacticraft_Mars') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Galacticraft_Mars+ '/' + stepLeaders[stepCount]);
+	}
+	//Galacticraft_Moon
+	if ($('#blocksPresetDD').val() == 'Blocks_Galacticraft_Moon') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Galacticraft_Moon+ '/' + stepLeaders[stepCount]);
+	}
+	//Galaxy_Space
+	if ($('#blocksPresetDD').val() == 'Blocks_Galaxy_Space') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Galaxy_Space+ '/' + stepLeaders[stepCount]);
+	}//GT_New_Horizons_Core_Mod
+	if ($('#blocksPresetDD').val() == 'Blocks_GT_New_Horizons_Core_Mod') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_GT_New_Horizons_Core_Mod+ '/' + stepLeaders[stepCount]);
+	}
+	//Hardcore_Ender_Expansion
+	if ($('#blocksPresetDD').val() == 'Blocks_Hardcore_Ender_Expansion') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Hardcore_Ender_Expansion+ '/' + stepLeaders[stepCount]);
+	}
+	//IndustrialCraft_2
+	if ($('#blocksPresetDD').val() == 'Blocks_IndustrialCraft_2') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_IndustrialCraft_2+ '/' + stepLeaders[stepCount]);
+	}
+	//LootGames
+	if ($('#blocksPresetDD').val() == 'Blocks_LootGames') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_LootGames+ '/' + stepLeaders[stepCount]);
+	}
+	//Magic_Bees
+	if ($('#blocksPresetDD').val() == 'Blocks_Magic_Bees') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Magic_Bees+ '/' + stepLeaders[stepCount]);
+	}
+	//Open_Modular_Turrets
+	if ($('#blocksPresetDD').val() == 'Blocks_Open_Modular_Turrets') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Open_Modular_Turrets+ '/' + stepLeaders[stepCount]);
+	}
+	//Pams_Harvest_The_Nether
+	if ($('#blocksPresetDD').val() == 'Blocks_Pams_Harvest_The_Nether') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Pams_Harvest_The_Nether+ '/' + stepLeaders[stepCount]);
+	}
+	//Railcraft
+	if ($('#blocksPresetDD').val() == 'Blocks_Railcraft') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Railcraft+ '/' + stepLeaders[stepCount]);
+	}
+	//Random_things
+	if ($('#blocksPresetDD').val() == 'Blocks_Random_Things') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Random_Things+ '/' + stepLeaders[stepCount]);
+	}
+	//SG_Craft
+	if ($('#blocksPresetDD').val() == 'Blocks_SG_Craft') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_SG_Craft+ '/' + stepLeaders[stepCount]);
+	}
+	//Tainted_Magic
+	if ($('#blocksPresetDD').val() == 'Blocks_Tainted_Magic') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Tainted_Magic+ '/' + stepLeaders[stepCount]);
+	}
+	//Thaumic_Bases
+	if ($('#blocksPresetDD').val() == 'Blocks_Thaumic_Bases') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Thaumic_Bases+ '/' + stepLeaders[stepCount]);
+	}
+	//Thaumic_Horizons
+	if ($('#blocksPresetDD').val() == 'Blocks_Thaumic_Horizons') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Thaumic_Horizons+ '/' + stepLeaders[stepCount]);
+	}
+	//Thaumic_Tinkerer
+	if ($('#blocksPresetDD').val() == 'Blocks_Thaumic_Tinkerer') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Thaumic_Tinkerer+ '/' + stepLeaders[stepCount]);
+	}
+	//Tinkers_Defence
+	if ($('#blocksPresetDD').val() == 'Blocks_Tinkers_Defence') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Tinkers_Defence+ '/' + stepLeaders[stepCount]);
+	}
+	//Twilight_Forest
+	if ($('#blocksPresetDD').val() == 'Blocks_Twilight_Forest') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Twilight_Forest+ '/' + stepLeaders[stepCount]);
+	}
+	//Witching_Gadgets
+	if ($('#blocksPresetDD').val() == 'Blocks_Witching_Gadgets') {
+		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset_Witching_Gadgets+ '/' + stepLeaders[stepCount]);
+	}
+
 
 
 
@@ -399,6 +535,110 @@ var blockData_project_red_exploration = eval('blocks_project_red_exploration');
 //thaumcraft
 var blockset_thaumcraft = 'blocks_thaumcraft';
 var blockData_thaumcraft = eval('blocks_thaumcraft');
+//Amun-Ra
+var blockset_Amun_Ra = 'Blocks_Amun_Ra';
+var blockData_Amun_Ra = eval('Blocks_Amun_Ra');
+//Applied Energistics 2
+var blockset_Applied_Energistics_2 = 'Blocks_Applied_Energistics_2';
+var blockData_Applied_Energistics_2 = eval('Blocks_Applied_Energistics_2');
+//Automagy
+var blockset_Automagy = 'Blocks_Automagy';
+var blockData_Automagy = eval('Blocks_Automagy');
+//Avaritia
+var blockset_Avaritia = 'Blocks_Avaritia';
+var blockData_Avaritia = eval('Blocks_Avaritia');
+//BartWorks
+var blockset_BartWorks = 'Blocks_BartWorks';
+var blockData_BartWorks = eval('Blocks_BartWorks');
+//Blood Magic
+var blockset_Blood_Magic = 'Blocks_Blood_Magic';
+var blockData_Blood_Magic = eval('Blocks_Blood_Magic');
+//Botany
+var blockset_Botany = 'Blocks_Botany';
+var blockData_Botany = eval('Blocks_Botany');
+//Cooking For Blockheads
+var blockset_Cooking_For_Blockheads = 'Blocks_Cooking_For_Blockheads';
+var blockData_Cooking_For_Blockheads = eval('Blocks_Cooking_For_Blockheads');
+//Draconic Evolution
+var blockset_Draconic_Evolution = 'Blocks_Draconic_Evolution';
+var blockData_Draconic_Evolution = eval('Blocks_Draconic_Evolution');
+//Ender IO
+var blockset_Ender_IO = 'Blocks_Ender_IO';
+var blockData_Ender_IO = eval('Blocks_Ender_IO');
+//Forbidden Magic
+var blockset_Forbidden_Magic = 'Blocks_Forbidden_Magic';
+var blockData_Forbidden_magic = eval('Blocks_Forbidden_Magic');
+//Forestry
+var blockset_Forestry = 'Blocks_Forestry';
+var blockData_Forestry = eval('Blocks_Forestry');
+//Galacticraft_Asteroids
+var blockset_Galacticraft_Asteroids = 'Blocks_Galacticraft_Asteroids';
+var blockData_Galacticraft_Asteroids = eval('Blocks_Galacticraft_Asteroids');
+//Galacticraft_Core
+var blockset_Galacticraft_Core = 'Blocks_Galacticraft_Core';
+var blockData_Galacticraft_Core = eval('Blocks_Galacticraft_Core');
+//Galacticraft_Mars
+var blockset_Galacticraft_Mars = 'Blocks_Galacticraft_Mars';
+var blockData_Galacticraft_Mars = eval('Blocks_Galacticraft_Mars');
+//Galacticraft_Moon
+var blockset_Galacticraft_Moon = 'Blocks_Galacticraft_Moon';
+var blockData_Galacticraft_Moon = eval('Blocks_Galacticraft_Moon');
+//Galaxy_Space
+var blockset_Galaxy_Space = 'Blocks_Galaxy_Space';
+var blockData_Galaxy_Space = eval('Blocks_Galaxy_Space');
+//GT_New_Horizons_Core_Mod
+var blockset_GT_New_Horizons_Core_Mod = 'Blocks_GT_New_Horizons_Core_Mod';
+var blockData_GT_New_Horizons_Core_Mod = eval('Blocks_GT_New_Horizons_Core_Mod');
+//Hardcore_Ender_Expansion
+var blockset_Hardcore_Ender_Expansion = 'Blocks_Hardcore_Ender_Expansion';
+var blockData_Hardcore_Ender_Expansion = eval('Blocks_Hardcore_Ender_Expansion');
+//IndustrialCraft_2
+var blockset_IndustrialCraft_2 = 'Blocks_IndustrialCraft_2';
+var blockData_IndustrialCraft_2 = eval('Blocks_IndustrialCraft_2');
+//LootGames
+var blockset_LootGames = 'Blocks_LootGames';
+var blockData_LootGames = eval('Blocks_LootGames');
+//Magic_Bees
+var blockset_Magic_Bees = 'Blocks_Magic_Bees';
+var blockData_Magic_Bees = eval('Blocks_Magic_Bees');
+//Open_Modular_Turrets
+var blockset_Open_Modular_Turrets = 'Blocks_Open_Modular_Turrets';
+var blockData_Open_Modular_Turrets = eval('Blocks_Open_Modular_Turrets');
+//Pams_Harvest_The_Nether
+var blockset_Pams_Harvest_The_Nether = 'Blocks_Pams_Harvest_The_Nether';
+var blockData_Pams_Harvest_The_Nether = eval('Blocks_Pams_Harvest_The_Nether');
+//Railcraft
+var blockset_Railcraft = 'Blocks_Railcraft';
+var blockData_Railcraft = eval('Blocks_Railcraft');
+//Random_Things
+var blockset_Random_Things = 'Blocks_Random_Things';
+var blockData_Random_Things = eval('Blocks_Random_Things');
+//SG_Craft
+var blockset_SG_Craft = 'Blocks_SG_Craft';
+var blockData_SG_Craft = eval('Blocks_SG_Craft');
+//Tainted_magic
+var blockset_Tainted_Magic = 'Blocks_Tainted_Magic';
+var blockData_Tainted_Magic = eval('Blocks_Tainted_Magic');
+//Thaumic_Bases
+var blockset_Thaumic_Bases = 'Blocks_Thaumic_Bases';
+var blockData_Thaumic_Bases = eval('Blocks_Thaumic_Bases');
+//Thaumic_Horizons
+var blockset_Thaumic_Horizons = 'Blocks_Thaumic_Horizons';
+var blockData_Thaumic_Horizons = eval('Blocks_Thaumic_Horizons');
+//Thaumic_Tinkerer
+var blockset_Thaumic_Tinkerer = 'Blocks_Thaumic_Tinkerer';
+var blockData_Thaumic_Tinkerer = eval('Blocks_Thaumic_Tinkerer');
+//Tinkers_Defence
+var blockset_Tinkers_Defence = 'Blocks_Tinkers_Defence';
+var blockData_Tinkers_Defence = eval('Blocks_Tinkers_Defence');
+//Twilight_Forest
+var blockset_Twilight_Forest = 'Blocks_Twilight_Forest';
+var blockData_Twilight_Forest = eval('Blocks_Twilight_Forest');
+//Witching_Gadgets
+var blockset_Witching_Gadgets = 'Blocks_Witching_Gadgets';
+var blockData_Witching_Gadgets = eval('Blocks_Witching_Gadgets');
+
+
 
 /* template for new blockset and blockData, replace *MOD* with chosen mod name
 var blockset_*MOD* = 'blocks_*MOD*';
@@ -549,6 +789,350 @@ function presetImport() {
 		$('#blocksPresetDD').val('blocks_thaumcraft');
 		blockData_thaumcraft = eval( $('#blocksPresetDD').val() );
 	}
+	//Amun-Ra
+	if (blockset_Amun_Ra == 'Blocks_Amun_Ra') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Amun_Ra',
+				text: 'Amun-Ra'
+			}));
+		$('#blocksPresetDD').val('Blocks_Amun_Ra');
+		blockData_Amun_Ra = eval( $('#blocksPresetDD').val() );
+	}
+	//Applied_Energistics_2
+	if (blockset_Applied_Energistics_2 == 'Blocks_Applied_Energistics_2') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Applied_Energistics_2',
+				text: 'Applied Energistics 2'
+			}));
+		$('#blocksPresetDD').val('Blocks_Applied_Energistics_2');
+		blockData_Applied_Energistics_2 = eval( $('#blocksPresetDD').val() );
+	}
+	//Automagy
+	if (blockset_Automagy == 'Blocks_Automagy') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Automagy',
+				text: 'Automagy'
+			}));
+		$('#blocksPresetDD').val('Blocks_Automagy');
+		blockData_Automagy = eval( $('#blocksPresetDD').val() );
+	}
+	//Avaritia
+	if (blockset_Avaritia == 'Blocks_Avaritia') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Avaritia',
+				text: 'Avaritia'
+			}));
+		$('#blocksPresetDD').val('Blocks_Avaritia');
+		blockData_Avaritia = eval( $('#blocksPresetDD').val() );
+	}
+	//BartWorks
+	if (blockset_BartWorks == 'Blocks_BartWorks') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_BartWorks',
+				text: 'BartWorks'
+			}));
+		$('#blocksPresetDD').val('Blocks_BartWorks');
+		blockData_BartWorks = eval( $('#blocksPresetDD').val() );
+	}
+	//Blood_Magic
+	if (blockset_Blood_Magic == 'Blocks_Blood_Magic') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Blood_Magic',
+				text: 'Blood Magic'
+			}));
+		$('#blocksPresetDD').val('Blocks_Blood_Magic');
+		blockData_Blood_Magic = eval( $('#blocksPresetDD').val() );
+	}
+	//Botany
+	if (blockset_Botany == 'Blocks_Botany') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Botany',
+				text: 'Botany'
+			}));
+		$('#blocksPresetDD').val('Blocks_Botany');
+		blockData_Botany = eval( $('#blocksPresetDD').val() );
+	}
+	//Cooking_For_Blockheads
+	if (blockset_Cooking_For_Blockheads == 'Blocks_Cooking_For_Blockheads') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Cooking_For_Blockheads',
+				text: 'Cooking for Blockheads'
+			}));
+		$('#blocksPresetDD').val('Blocks_Cooking_For_Blockheads');
+		blockData_Cooking_For_Blockheads = eval( $('#blocksPresetDD').val() );
+	}
+	//Draconic_Evolution
+	if (blockset_Draconic_Evolution == 'Blocks_Draconic_Evolution') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Draconic_Evolution',
+				text: 'Draconic Evolution'
+			}));
+		$('#blocksPresetDD').val('Blocks_Draconic_Evolution');
+		blockData_Draconic_Evolution = eval( $('#blocksPresetDD').val() );
+	}
+	//Ender_IO
+	if (blockset_Ender_IO == 'Blocks_Ender_IO') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Ender_IO',
+				text: 'Ender IO'
+			}));
+		$('#blocksPresetDD').val('Blocks_Ender_IO');
+		blockData_Ender_IO = eval( $('#blocksPresetDD').val() );
+	}
+	//Forbidden_Magic
+	if (blockset_Forbidden_Magic == 'Blocks_Forbidden_Magic') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Forbidden_Magic',
+				text: 'Forbidden Magic'
+			}));
+		$('#blocksPresetDD').val('Blocks_Forbidden_Magic');
+		blockData_Forbidden_Magic = eval( $('#blocksPresetDD').val() );
+	}
+	//Forestry
+	if (blockset_Forestry == 'Blocks_Forestry') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Forestry',
+				text: 'Forestry'
+			}));
+		$('#blocksPresetDD').val('Blocks_Forestry');
+		blockData_Forestry = eval( $('#blocksPresetDD').val() );
+	}
+
+	//Galacticraft_Asteroids
+	if (blockset_Galacticraft_Asteroids == 'Blocks_Galacticraft_Asteroids') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Galacticraft_Asteroids',
+				text: 'Galacticraft Asteroids'
+			}));
+		$('#blocksPresetDD').val('Blocks_Galacticraft_Asteroids');
+		blockData_Galacticraft_Asteroids = eval( $('#blocksPresetDD').val() );
+	}
+	//Galacticraft_Core
+	if (blockset_Galacticraft_Core == 'Blocks_Galacticraft_Core') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Galacticraft_Core',
+				text: 'Galacticraft Core'
+			}));
+		$('#blocksPresetDD').val('Blocks_Galacticraft_Core');
+		blockData_Galacticraft_Core = eval( $('#blocksPresetDD').val() );
+	}
+	//Galacticraft_Mars
+	if (blockset_Galacticraft_Mars == 'Blocks_Galacticraft_Mars') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Galacticraft_Mars',
+				text: 'Galacticraft Mars'
+			}));
+		$('#blocksPresetDD').val('Blocks_Galacticraft_Mars');
+		blockData_Galacticraft_Mars = eval( $('#blocksPresetDD').val() );
+	}
+	//Galacticraft_Moon
+	if (blockset_Galacticraft_Moon == 'Blocks_Galacticraft_Moon') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Galacticraft_Moon',
+				text: 'Galacticraft Moon'
+			}));
+		$('#blocksPresetDD').val('Blocks_Galacticraft_Moon');
+		blockData_Galacticraft_Moon = eval( $('#blocksPresetDD').val() );
+	}
+	//Galaxy_Space
+	if (blockset_Galaxy_Space == 'Blocks_Galaxy_Space') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Galaxy_Space',
+				text: 'Galaxy Space'
+			}));
+		$('#blocksPresetDD').val('Blocks_Galaxy_Space');
+		blockData_Galaxy_Space = eval( $('#blocksPresetDD').val() );
+	}
+	//GT_New_Horizons_Core_Mod
+	if (blockset_GT_New_Horizons_Core_Mod == 'Blocks_GT_New_Horizons_Core_Mod') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_GT_New_Horizons_Core_Mod',
+				text: 'GT: New Horizons Core Mod'
+			}));
+		$('#blocksPresetDD').val('Blocks_GT_New_Horizons_Core_Mod');
+		blockData_GT_New_Horizons_Core_Mod = eval( $('#blocksPresetDD').val() );
+	}
+	//Hardcore_Ender_Expansion
+	if (blockset_Hardcore_Ender_Expansion == 'Blocks_Hardcore_Ender_Expansion') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Hardcore_Ender_Expansion',
+				text: 'Hardcore Ender Expansion'
+			}));
+		$('#blocksPresetDD').val('Blocks_Hardcore_Ender_Expansion');
+		blockData_Hardcore_Ender_Expansion = eval( $('#blocksPresetDD').val() );
+	}
+	//IndustrialCraft_2
+	if (blockset_IndustrialCraft_2 == 'Blocks_IndustrialCraft_2') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_IndustrialCraft_2',
+				text: 'IndustrialCraft 2'
+			}));
+		$('#blocksPresetDD').val('Blocks_IndustrialCraft_2');
+		blockData_IndustrialCraft_2 = eval( $('#blocksPresetDD').val() );
+	}
+	//LootGames
+	if (blockset_LootGames == 'Blocks_LootGames') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_LootGames',
+				text: 'LootGames'
+			}));
+		$('#blocksPresetDD').val('Blocks_LootGames');
+		blockData_LootGames = eval( $('#blocksPresetDD').val() );
+	}
+	//Magic_Bees
+	if (blockset_Magic_Bees == 'Blocks_Magic_Bees') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Magic_Bees',
+				text: 'Magic Bees'
+			}));
+		$('#blocksPresetDD').val('Blocks_Magic_Bees');
+		blockData_Magic_Bees = eval( $('#blocksPresetDD').val() );
+	}
+	//Open_Modular_Turrets
+	if (blockset_Open_Modular_Turrets == 'Blocks_Open_Modular_Turrets') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Open_Modular_Turrets',
+				text: 'Open Modular Turrets'
+			}));
+		$('#blocksPresetDD').val('Blocks_Open_Modular_Turrets');
+		blockData_Open_Modular_Turrets = eval( $('#blocksPresetDD').val() );
+	}
+	//Pams_Harvest_The_Nether
+	if (blockset_Pams_Harvest_The_Nether == 'Blocks_Pams_Harvest_The_Nether') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Pams_Harvest_The_Nether',
+				text: 'Pams Harvest The Nether'
+			}));
+		$('#blocksPresetDD').val('Blocks_Pams_Harvest_The_Nether');
+		blockData_Pams_Harvest_The_Nether = eval( $('#blocksPresetDD').val() );
+	}
+	//Railcraft
+	if (blockset_Railcraft == 'Blocks_Railcraft') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Railcraft',
+				text: 'Railcraft'
+			}));
+		$('#blocksPresetDD').val('Blocks_Railcraft');
+		blockData_Railcraft = eval( $('#blocksPresetDD').val() );
+	}
+	//Random_Things
+	if (blockset_Random_Things == 'Blocks_Random_Things') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Random_Things',
+				text: 'Random Things'
+			}));
+		$('#blocksPresetDD').val('Blocks_Random_Things');
+		blockData_Random_Things = eval( $('#blocksPresetDD').val() );
+	}
+	//SG_Craft
+	if (blockset_SG_Craft == 'Blocks_SG_Craft') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_SG_Craft',
+				text: 'SG Craft (StarGate Craft)'
+			}));
+		$('#blocksPresetDD').val('Blocks_SG_Craft');
+		blockData_SG_Craft = eval( $('#blocksPresetDD').val() );
+	}
+	//Tainted_Magic
+	if (blockset_Tainted_Magic == 'Blocks_Tainted_Magic') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Tainted_Magic',
+				text: 'Tainted Magic'
+			}));
+		$('#blocksPresetDD').val('Blocks_Tainted_Magic');
+		blockData_Tainted_Magic = eval( $('#blocksPresetDD').val() );
+	}
+	//Thaumic_Bases
+	if (blockset_Thaumic_Bases == 'Blocks_Thaumic_Bases') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Thaumic_Bases',
+				text: 'Thaumic Bases'
+			}));
+		$('#blocksPresetDD').val('Blocks_Thaumic_Bases');
+		blockData_Thaumic_Bases = eval( $('#blocksPresetDD').val() );
+	}
+	//Thaumic_Horizons
+	if (blockset_Thaumic_Horizons == 'Blocks_Thaumic_Horizons') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Thaumic_Horizons',
+				text: 'Thaumic Horizons'
+			}));
+		$('#blocksPresetDD').val('Blocks_Thaumic_Horizons');
+		blockData_Thaumic_Horizons = eval( $('#blocksPresetDD').val() );
+	}
+	//Thaumic_Tinkerer
+	if (blockset_Thaumic_Tinkerer == 'Blocks_Thaumic_Tinkerer') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Thaumic_Tinkerer',
+				text: 'Thaumic Tinkerer'
+			}));
+		$('#blocksPresetDD').val('Blocks_Thaumic_Tinkerer');
+		blockData_Thaumic_Tinkerer = eval( $('#blocksPresetDD').val() );
+	}
+	//Tinkers_Defence
+	if (blockset_Tinkers_Defence == 'Blocks_Tinkers_Defence') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Tinkers_Defence',
+				text: 'Tinkers Defence'
+			}));
+		$('#blocksPresetDD').val('Blocks_Tinkers_Defence');
+		blockData_Tinkers_Defence = eval( $('#blocksPresetDD').val() );
+	}
+	//Twilight_Forest
+	if (blockset_Twilight_Forest == 'Blocks_Twilight_Forest') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Twilight_Forest',
+				text: 'Twilight Forest'
+			}));
+		$('#blocksPresetDD').val('Blocks_Twilight_Forest');
+		blockData_Twilight_Forest = eval( $('#blocksPresetDD').val() );
+	}
+	//Witching_Gadgets
+	if (blockset_Witching_Gadgets == 'Blocks_Witching_Gadgets') {
+		$('#blocksPresetDD').append(
+			$(document.createElement('option')).prop({
+				value: 'Blocks_Witching_Gadgets',
+				text: 'Witching Gadgets'
+			}));
+		$('#blocksPresetDD').val('Blocks_Witching_Gadgets');
+		blockData_Witching_Gadgets = eval( $('#blocksPresetDD').val() );
+	}
+
+
+
 
 /* template, replace *MOD* with chosen mod name
 	if (blockset_*MOD* == 'blocks_*MOD*') {
