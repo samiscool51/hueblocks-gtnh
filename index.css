@@ -94,7 +94,8 @@ small {
 	transition: 200ms;
 }
 #rndColorsBtn:hover, #swapColorsBtn:hover, #colorBPick1:hover, #colorBPick2:hover {
-	opacity: 1 !important;
+	opacity: 1
+	!important;width: 32px;
 	background: #fff3;
 	border: 2px solid #fff0;
 }
@@ -207,7 +208,7 @@ small {
 	text-align: center;
 	margin-top: -32px;
 }
-#ggBtn {
+#ggBtn, #ggBtn1, #ggBtn2 {
 	appearance: none;
 	display: inline-block;
 	padding: 18px 24px;
@@ -218,16 +219,16 @@ small {
 	box-shadow: 0 0 0 4px #181818;
 	transition: 200ms;
 }
-#ggBtn:not(:disabled):hover {
+#ggBtn:not(:disabled):hover, #ggBtn1:not(:disabled):hover, #ggBtn2:not(:disabled):hover {
 	border: 2px solid #a1a3b3;
 }
-#ggBtn:not(:disabled):hover:active {
+#ggBtn:not(:disabled):hover:active, #ggBtn1:not(:disabled):hover:active, #ggBtn2:not(:disabled):hover:active {
 	background-color: #fff;
 	border: 2px solid #fff;
 	box-shadow: 0 0 0 4px #181818, inset 0 0 0 2px #ccc;
 	color: #171a44;
 }
-#ggBtn:disabled {
+#ggBtn:disabled, #ggBtn1:disabled, #ggBtn2:disabled {
 	background-color: #999;
 	color: #181818;
 	box-shadow: 0 0 0 2px #666;
@@ -236,7 +237,7 @@ small {
 .visScaleBtns {
 	position: absolute;
 	right: 20px;
-	margin-top: -72px;
+	margin-top: -90px;
 	background-color: #181818;
 	box-shadow: 0 0 0 2px #181818;
 	border-radius: 1280px;

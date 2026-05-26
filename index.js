@@ -9,10 +9,8 @@ if (isMobileUserAgent()) {
 	alert("WARNING!\nHueblocks-GTNH is designed for Desktop use.\nMobile use is not supported.\nPlease keep this in mind while using Hueblocks-GTNH.");
 
 }
-else {
-	//alert("WARNING!\nHueblocks-GTNH is designed for Desktop use.\nMobile use is not supported.\nPlease keep this in mind while using Hueblocks-GTNH.");
 
-}
+let ExportedPallet = "";
 
 
 /* colour picker with gradient preview */
@@ -132,7 +130,7 @@ $('#cLenght3').on('click', () => {
 		cLenghtDefaulter();
 	}
 
-	/* process invalid numeral input values */
+	/* process invalid numeral input values var temp1;*/
 	if (stepLen < 3) {
 		alert('The entered number is too small; please enter at least 3 or bigger.');
 		stepLen = 3;
@@ -455,8 +453,12 @@ if ($('#blocksPresetDD').val() == 'blocks_*MOD*') {
 
 	stepVis.attr('blockname', stepLeaders[stepCount].replace('.png', '').replace(/[-._]/g, ' '));
 	stepVis.css({'width': visSize + 'px', 'height': visSize + 'px'});
-
 	stepVis.appendTo('#visResult');
+
+	//Get the results and store them so that way we can save them to a clipboard later
+	var PalletResult = stepVis.attr('blockname');
+	ExportedPallet += PalletResult + ", ";
+	//console.log(ExportedPallet);
 }
 
 
@@ -1519,13 +1521,27 @@ $('#BPickScreenClose').on('click', () => $('#BPickScreen').fadeOut(300) );
 /* finally, process GG button */
 function genGradient() {
 	$('#ggBtn').prop('disabled', true);
+	$('#CopyToClipboardButton').prop('disabled', true);
+	$('#ClearCopyToClipboardButton').prop('disabled', true);
 	updateSteps();
 	genBlocks();
 	$('#ggBtn').prop('disabled', false);
+	$('#CopyToClipboardButton').prop('disabled', false);
+	$('#ClearCopyToClipboardButton').prop('disabled', false);
 }
+
 
 $('#ggBtn').on('click', () => genGradient());
 
+function OutputPalletResults() {
+	if (ExportedPallet) {
+		navigator.clipboard.writeText(ExportedPallet);
+		alert("Pallet coppied to your clipboard!")
+	}
+}
+function ClearPalletResults() {
+	ExportedPallet = "";
+}
 
 
 
@@ -1542,5 +1558,7 @@ $(document).ready(function() {
 
 	/* enable GG button when the script is ready */
 	$("#ggBtn").prop("disabled", false);
+	$('#ggBtn1').prop('disabled', false);
+	$('#ggBtn2').prop('disabled', false);
 })
 

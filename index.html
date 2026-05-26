@@ -36,15 +36,20 @@
 				</p>
 		</div>
 </header>
-
-	<div class="ggBtnHandler"><button id="ggBtn" disabled="true">GENERATE BLOCKS GRADIENT</button>
-	<em><br>tip: left click on a block to temporarily hide it</em></div>
-	<div class="visScaleBtns"><button id="visDownscale"><img src="./icon/zoom-out.svg" title="Downscale (0.5x)"></img></button><button id="visUpscale"><img src="./icon/zoom-in.svg" title="Upscale (2.0x)"></img></button></div>
+	<div class="ggBtnHandler">
+		<button id="ggBtn" disabled="true">GENERATE BLOCKS GRADIENT</button>
+		<button id="ggBtn1" style="font-size: 12px; padding: 14px 14px 14px 14px; vertical-align: -30%;" onclick="OutputPalletResults()" disabled="false">Copy pallet result to clipboard. </br> (Does not clear existing results.)</button>
+		<button id="ggBtn2" style="font-size: 15px; padding: 21px 21px 21px 21px; vertical-align: 5%;" onclick="ClearPalletResults()" disabled="false">Clear pallet result.</button>
+		<em><br>tip: left click on a block to temporarily hide it</em></div>
+		<br>
+		<div class="visScaleBtns"><button id="visDownscale"><img src="./icon/zoom-out.svg" title="Downscale (0.5x)"></img></button><button id="visUpscale"><img src="./icon/zoom-in.svg" title="Upscale (2.0x)"></img></button></div>
 	<div class="bottomConfigs">
 		Palette: <select id="blocksPresetDD"><option value="blocks" selected="selected">Loading palettes...</option></select><img src="./icon/dd-arrow.svg" id="blocksPresetDDArrow" title="Downscale (0.5x)"></img>
 		<span style="margin: 0 3px 0 9px">·</span>
 		<button id="CBBtn"><img src="./icon/preferences.svg" title="Custom Blockset"></img> Custom Blockset...</button>
 	</div>
+	</div>
+
 
 	<div id="CPSelScreen" style="display: none;"><h2 class="screenTip">ー Select 1 or more blocks and press <img src="./icon/confirm.svg" title="Confirm"></img> ー</h2>
 	<div class="FSBtnsHolder">
