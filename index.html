@@ -9,7 +9,7 @@
 <header>
 	<h1 id="logo">HueBlocks for Greg Tech: New Horizens</h1>
 	<p>or older modded Minecraft in general.</p>
-	<h2>Create beautiful block gradients in a few clicks!</h2>
+	<h2>Create beautiful block pallet in a few clicks!</h2>
 		<div class="colorPicker">
 			<div id="colorPreview" style="background: #4b5a70;">
 				<button id="swapColorsBtn"><img src="./icon/swap.svg" title="Swap colours"></img></button>
@@ -19,7 +19,7 @@
 		</div>
 		<em style="position: relative; top: 2px;">left click on the left/right side of the bar to change its color; right click to copy hex</em>
 		<div class="topConfigs">
-			<div class="lenghtPicker"><h2>Gradient chain length:</h2>
+			<div class="lenghtPicker"><h2>Block pallet chain length:</h2>
 				<input type="radio" name="cLenght" id="cLenght1" checked="checked"><label for="cLenght1" id="cLenghtBtn1">9 blocks
 				</label><input type="radio" name="cLenght" id="cLenght2"><label for="cLenght2" id="cLenghtBtn2">25 blocks
 				</label><input type="radio" name="cLenght" id="cLenght4"><label for="cLenght4" id="cLenghtBtn4">99 blocks
@@ -37,16 +37,16 @@
 		</div>
 </header>
 	<div class="ggBtnHandler">
-		<button id="ggBtn" disabled="true">GENERATE BLOCKS GRADIENT</button>
+		<button id="ggBtn" disabled="true">GENERATE BLOCKS PALLET</button>
 		<button id="ggBtn1" style="font-size: 12px; padding: 14px 14px 14px 14px; vertical-align: -30%;" onclick="OutputPalletResults()" disabled="false">Copy pallet result to clipboard. </br> (Does not clear existing results.)</button>
-		<button id="ggBtn2" style="font-size: 15px; padding: 21px 21px 21px 21px; vertical-align: 5%;" onclick="ClearPalletResults()" disabled="false">Clear pallet result.</button>
-		<em><br>tip: left click on a block to temporarily hide it</em></div>
+		<button id="ggBtn2" style="font-size: 15px; padding: 21px 21px 21px 21px; vertical-align: 5%;" onclick="ClearPalletResults()" disabled="false">Clear pallet result clipboard.</button>
+		<br><em id="tips">Loading Tips...</em></div>
 		<br>
 		<div class="visScaleBtns"><button id="visDownscale"><img src="./icon/zoom-out.svg" title="Downscale (0.5x)"></img></button><button id="visUpscale"><img src="./icon/zoom-in.svg" title="Upscale (2.0x)"></img></button></div>
 	<div class="bottomConfigs">
-		Palette: <select id="blocksPresetDD"><option value="blocks" selected="selected">Loading palettes...</option></select><img src="./icon/dd-arrow.svg" id="blocksPresetDDArrow" title="Downscale (0.5x)"></img>
+		Block set to use: <select id="blocksPresetDD"><option value="blocks" selected="selected">Loading block sets...</option></select><img src="./icon/dd-arrow.svg" id="blocksPresetDDArrow" title="Downscale (0.5x)"></img>
 		<span style="margin: 0 3px 0 9px">·</span>
-		<button id="CBBtn"><img src="./icon/preferences.svg" title="Custom Blockset"></img> Custom Blockset...</button>
+		<button id="CBBtn"><img src="./icon/preferences.svg" title="Custom Blockset"></img>Upload images to make your own custom Block Set:</button>
 	</div>
 	</div>
 

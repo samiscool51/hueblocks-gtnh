@@ -8,9 +8,9 @@ Biomes O' Plenty's textures were extracted directly from Biomes O' Plenty versio
 
 Ztones's textures were extracted directly from Ztones version 1.7.10-2.2.2, and is owned by and belongs to riciJak.<br />
 
-Chisel's textures were extracted directly from Chisel version 2.15.4-GTNH, and is owned by and was originally created by AUTOMATIC_MAIDEN.<br />
+Chisel's textures were extracted directly from Chisel version 2.15.4-GTNH, and some are owned by and was originally created by AUTOMATIC_MAIDEN. Some textures also used in Chisel are owned by and were originally created by Rhdox for the Painterly Pack texture pack. (Now no longer available.)<br />
 
-Et Futurum Requiem's textures were extracted directly from Et Futurum Requiem version 2.6.20-GTNH, and the mod itself is owned by and was originally created by buttilda, then forked by KryptonCaptain, then forked again by RoadHog360 which this version is based off of. The newer textures used in this mod are ripped from Minecraft Version 1.8 and newer, which is owned by Mojang Studios<br />
+Et Futurum Requiem's textures were extracted directly from Et Futurum Requiem version 2.6.20-GTNH, and the mod itself is owned by and was originally created by buttilda, then forked by KryptonCaptain, then forked again by RoadHog360 which this version is based off of. The newer textures used in this mod are ripped from Minecraft Version 1.8 and newer, which is owned by Mojang Studios.<br />
 
 Natura's textures were extracted directly from Natura version 2.7.6, and is owned by and was originally created by mDiyo.<br />
 

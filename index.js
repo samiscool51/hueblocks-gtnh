@@ -10,8 +10,12 @@ if (isMobileUserAgent()) {
 
 }
 
+//ExportedPallet string holder thingy
 let ExportedPallet = "";
 
+//Tips thingy
+const tipsDiv = document.getElementById('tips');
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 /* colour picker with gradient preview */
 let color1, color2;
@@ -243,14 +247,14 @@ function genBlocks() {
 
 /* block visualisation */
 function blockVis() {
-	let stepVis = $('<img class="visImg" onclick="$(this).hide(200);" onmouseover="showPopup(this);" onmouseout="hidePopup(this);">');
+	let stepVis = $('<img class="visImg" onclick="RemoveBlock(this);" onmouseover="showPopup(this);" onmouseout="hidePopup(this);">');
 	const id = stepLeaders[stepCount];
 	const item = blockData.find(i => i.id === id.replace(".png"));
 	//Yes we have to do this terribly, yes it'll probally get slower as more mods are added
 	//I don't care, it works
 	//vanilla
 	if ($('#blocksPresetDD').val() == 'blocks_vanilla') {
-		
+
 		stepVis.attr('src', item?.imageData ? item.imageData : './data/blocksets/' + blockset + '/' + stepLeaders[stepCount]);
 	}
 	//biomes o plenty
@@ -488,6 +492,13 @@ function showPopup(block) {
 function hidePopup() {
 	$('#visPopup').html('MissingNo');
 	$('#visPopup').hide();
+}
+
+//remove Blocks from pallet and clipboard
+function RemoveBlock(block){
+	$(block).hide(200);
+	var RemoveSelection = ExportedPallet.replaceAll(($(block).attr('blockname')), '');
+	ExportedPallet = RemoveSelection;
 }
 
 
@@ -780,7 +791,7 @@ function presetImport() {
 			}));
 		$('#blocksPresetDD').val('blocks_project_red_exploration');
 		blockData_project_red_exploration = eval( $('#blocksPresetDD').val() );
-	}
+	}this
 	//thaumcraft
 	if (blockset_thaumcraft == 'blocks_thaumcraft') {
 		$('#blocksPresetDD').append(
@@ -1210,9 +1221,9 @@ async function onDirectoryChange(d) {
 	if (!files.length) return;
 	else {
 		/* wipe current blockset only if at least 1 image was uploaded */
-		if ($('#CBCustomBlocks').html() == []) { 
-			//console.log('[b] Custom blockset wiped successfully.'); 
-			blockData = [], customBlockset = []; 
+		if ($('#CBCustomBlocks').html() == []) {
+			//console.log('[b] Custom blockset wiped successfully.');
+			blockData = [], customBlockset = [];
 		}
 
 		async function wait(ms) {
@@ -1259,9 +1270,9 @@ async function onDirectoryChange(d) {
 		console.log(`[b] Generated custom blockset out of ${customBlockset.length + 1} block(s):`, customBlockset);
 
 		/* allow confirm if 1 or more images are loaded;
-		we add +1 because check happens before picture appends to list, 
+		we add +1 because check happens before picture appends to list,
 		and the least amount possible to upload is 1 image */
-		if (customBlockset.length + 1 >= 0) CBConfirmUpdater(false); 
+		if (customBlockset.length + 1 >= 0) CBConfirmUpdater(false);
 
 	}
 }
@@ -1350,7 +1361,7 @@ $('#blocksPresetDD').change(() => {
 
 		/* visualise all the available blocks in alphabetic order */
 		let CPselVisLetter = 'ибражы';
-		
+
 		for (let CPSelBlocksVis in blockData) {
 			if (CPselVisLetter != blockData[CPSelBlocksVis].id[0]) {
 
@@ -1523,6 +1534,9 @@ function genGradient() {
 	$('#ggBtn').prop('disabled', true);
 	$('#CopyToClipboardButton').prop('disabled', true);
 	$('#ClearCopyToClipboardButton').prop('disabled', true);
+	if (! $('#optRKeep').is(':checked')){
+		ClearPalletResults();
+	};
 	updateSteps();
 	genBlocks();
 	$('#ggBtn').prop('disabled', false);
@@ -1533,10 +1547,11 @@ function genGradient() {
 
 $('#ggBtn').on('click', () => genGradient());
 
+//Our Pallet to clipboard function
 function OutputPalletResults() {
 	if (ExportedPallet) {
 		navigator.clipboard.writeText(ExportedPallet);
-		alert("Pallet coppied to your clipboard!")
+		alert("Pallet copied to your clipboard!")
 	}
 }
 function ClearPalletResults() {
@@ -1560,5 +1575,29 @@ $(document).ready(function() {
 	$("#ggBtn").prop("disabled", false);
 	$('#ggBtn1').prop('disabled', false);
 	$('#ggBtn2').prop('disabled', false);
+	RandomizeTips();
 })
+//Our Tips
+const ListOfTips = [
+	"Left click on a block to remove it from your results.",
+	"If you're in the Stone or Steam age of GTNH, Biomes o' Plenty and Natura are your best bet for choosing a pallet.",
+	"If you turn on \"Keep Previous results\" you can combine your results into one pallet selection. Great for mixing pallets and Block Sets!",
+	"If you're in or past the EV tier of GTNH, a magority of blocks in the \"All Blocks\" pallet will be accessiable to you.",
+	"GTNH is a hard modpack, take small steps and do small goals at first to not burn yourself out. (Speaking from experince)",
+	"Try avoiding blocks with flat or minimilistic textures if you aren't going minimilist, blocks with detail can really enhance your build!",
+	"If you're strugling to pick a color range, try randomising it by pressing the star (✨) button!",
+	"You can share your pallet via text by pressing \"Copy pallet results to clipboard\" then pasting it wherever!.",
+	"Share your pallet on the GTNH discord! Others might wanna use it! Be sure to tell them where you generated it!",
+	];
+
+//The thing that randomly selects the tips to be shown every 15 seconds
+const RandomizeTips = async () => {
+	while (true){
+		const random = Math.floor(Math.random() * ListOfTips.length);
+		tipsDiv.textContent = "Tip: " + ListOfTips[random]
+		await delay(15000);
+	}
+
+}
+
 

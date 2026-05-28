@@ -1,4 +1,4 @@
-/* generated at 2026-05-21 10:52:32.250420 */
+/* generated at 2026-05-28 10:11:50.293218 */
 
 var blocks_natura = [
     { id: "natura_air_sulfur.png", rgb: [221, 165, 156] },
@@ -94,7 +94,6 @@ var blocks_natura = [
     { id: "natura_eucalyptus_workbench_face.png", rgb: [167, 127, 132] },
     { id: "natura_eucalyptus_workbench_side.png", rgb: [168, 123, 129] },
     { id: "natura_eucalyptus_workbench_top.png", rgb: [134, 88, 61] },
-    { id: "natura_flower_bluebells.png", rgb: [48, 83, 121] },
     { id: "natura_fusewood_bark.png", rgb: [27, 23, 16] },
     { id: "natura_fusewood_bookshelf.png", rgb: [92, 93, 77] },
     { id: "natura_fusewood_heart.png", rgb: [71, 110, 90] },
